@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTG Meta Tracker</title>
+  <meta name="description" content="Metagame e composizione delle liste vincenti di Magic: The Gathering, tornei online e cartacei, aggiornato ogni 12 ore.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#/">MTG <span>Meta Tracker</span></a>
+      <nav id="formats" class="formats" aria-label="Formati"></nav>
+    </div>
+    <div class="wrap filters" id="filters">
+      <label>Periodo
+        <select id="f-days">
+          <option value="7">7 giorni</option><option value="14">14 giorni</option>
+          <option value="30" selected>30 giorni</option><option value="60">60 giorni</option>
+          <option value="90">90 giorni</option>
+        </select>
+      </label>
+      <label>Eventi
+        <select id="f-type">
+          <option value="all">Online + cartacei</option><option value="online">Solo online</option>
+          <option value="paper">Solo cartacei</option>
+        </select>
+      </label>
+      <label>Piazzamento
+        <select id="f-place">
+          <option value="all">Tutte le liste</option><option value="top8">Top 8 / leghe 5-0</option>
+          <option value="win">Solo vincitori</option>
+        </select>
+      </label>
+      <label class="grow">Cerca carta
+        <input id="f-card" list="card-list" placeholder="es. Lightning Bolt" autocomplete="off">
+        <datalist id="card-list"></datalist>
+      </label>
+    </div>
+  </header>
+
+  <main class="wrap" id="app"><p class="muted">Caricamento…</p></main>
+
+  <footer class="wrap foot">
+    <div id="updated"></div>
+    <div>Dati scaricabili:
+      <a href="data/export/decks.csv">decks.csv</a> ·
+      <a href="data/export/deck_cards.csv">deck_cards.csv</a> ·
+      <a href="data/export/archetype_card_stats.csv">archetype_card_stats.csv</a> ·
+      <a href="data/export/tournaments.csv">tournaments.csv</a> ·
+      <a href="data/export/mtg-meta.sqlite">database SQLite</a>
+    </div>
+    <div class="muted">Fonti: MTGO (mtgo.com), Melee.gg, Topdeck.gg e altre tramite MTGODecklistCache; MTGTop8.
+      Archetipi: regole MTGOFormatData. Progetto non ufficiale, non affiliato a Wizards of the Coast.</div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

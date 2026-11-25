@@ -1,0 +1,70 @@
+name: Aggiorna dati e sito
+
+on:
+  schedule:
+    - cron: "17 5,17 * * *"   # ogni 12 ore (05:17 e 17:17 UTC, dopo l'aggiornamento giornaliero delle fonti)
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Giorni indietro da scaricare (usa 90 al primo avvio)"
+        default: "3"
+      mtgtop8_requests:
+        description: "Tetto richieste MTGTop8 (5 s l'una)"
+        default: "200"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scarica nuovi tornei
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >
+          python -m mtgmeta update
+          --days ${{ inputs.days || '3' }}
+          --mtgtop8-requests ${{ inputs.mtgtop8_requests || '200' }}
+
+      - name: Salva l'archivio grezzo nel repository
+        run: |
+          git config user.name "mtg-meta-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tournaments data/state.json
+          if git diff --cached --quiet; then
+            echo "Nessun torneo nuovo"
+          else
+            git commit -m "Dati: aggiornamento $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push
+          fi
+
+      - name: Classifica e genera il sito
+        run: python -m mtgmeta build --site-days 90
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
