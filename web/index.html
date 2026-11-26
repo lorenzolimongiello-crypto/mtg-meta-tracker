@@ -2,58 +2,96 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MTG Meta Tracker</title>
-  <meta name="description" content="Metagame e composizione delle liste vincenti di Magic: The Gathering, tornei online e cartacei, aggiornato ogni 12 ore.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Metagame — il metagame di Magic, raccontato</title>
+  <meta name="description" content="Tutti i risultati dei tornei di Magic: The Gathering, online e cartacei, in un unico posto. Quali mazzi vincono, con quali carte, in quali tornei. Aggiornato ogni 12 ore.">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23a8452b'/%3E%3Cpath d='M9 22V10l7 8 7-8v12' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cards.scryfall.io" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    try { const t = localStorage.getItem("mm-theme"); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
+  </script>
 </head>
 <body>
-  <header class="top">
-    <div class="wrap top-row">
-      <a class="brand" href="#/">MTG <span>Meta Tracker</span></a>
-      <nav id="formats" class="formats" aria-label="Formati"></nav>
-    </div>
-    <div class="wrap filters" id="filters">
-      <label>Periodo
-        <select id="f-days">
-          <option value="7">7 giorni</option><option value="14">14 giorni</option>
-          <option value="30" selected>30 giorni</option><option value="60">60 giorni</option>
-          <option value="90">90 giorni</option>
-        </select>
-      </label>
-      <label>Eventi
-        <select id="f-type">
-          <option value="all">Online + cartacei</option><option value="online">Solo online</option>
-          <option value="paper">Solo cartacei</option>
-        </select>
-      </label>
-      <label>Piazzamento
-        <select id="f-place">
-          <option value="all">Tutte le liste</option><option value="top8">Top 8 / leghe 5-0</option>
-          <option value="win">Solo vincitori</option>
-        </select>
-      </label>
-      <label class="grow">Cerca carta
-        <input id="f-card" list="card-list" placeholder="es. Lightning Bolt" autocomplete="off">
-        <datalist id="card-list"></datalist>
-      </label>
+  <a class="skip" href="#app">Vai al contenuto</a>
+  <header class="masthead">
+    <div class="wrap mast-row">
+      <a class="brand" href="#/" aria-label="Metagame, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M9 22V10l7 8 7-8v12"/></svg>
+        <span>Metagame</span>
+      </a>
+      <nav id="formats" class="format-nav" aria-label="Formati"></nav>
+      <div class="mast-tools">
+        <div class="search" role="search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg>
+          <input id="q" type="search" placeholder="Cerca una carta o un mazzo" autocomplete="off" aria-label="Cerca una carta o un mazzo" aria-controls="q-results" aria-expanded="false">
+          <div id="q-results" class="search-results" role="listbox" hidden></div>
+        </div>
+        <button id="theme" class="icon-btn" type="button" aria-label="Cambia tema">
+          <svg class="i-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 1.5v2.2M10 16.3v2.2M1.5 10h2.2M16.3 10h2.2M4 4l1.6 1.6M14.4 14.4 16 16M4 16l1.6-1.6M14.4 5.6 16 4"/></svg>
+          <svg class="i-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 12.6A7 7 0 0 1 7.4 3.5a7 7 0 1 0 9.1 9.1Z"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="wrap" id="app"><p class="muted">Caricamento…</p></main>
-
-  <footer class="wrap foot">
-    <div id="updated"></div>
-    <div>Dati scaricabili:
-      <a href="data/export/decks.csv">decks.csv</a> ·
-      <a href="data/export/deck_cards.csv">deck_cards.csv</a> ·
-      <a href="data/export/archetype_card_stats.csv">archetype_card_stats.csv</a> ·
-      <a href="data/export/tournaments.csv">tournaments.csv</a> ·
-      <a href="data/export/mtg-meta.sqlite">database SQLite</a>
+  <div id="filters" class="filters" hidden>
+    <div class="wrap filter-row">
+      <div class="seg" role="group" aria-label="Periodo" data-filter="days">
+        <button data-v="7">7 giorni</button><button data-v="30">30 giorni</button><button data-v="90">90 giorni</button>
+      </div>
+      <div class="seg" role="group" aria-label="Tipo di evento" data-filter="type">
+        <button data-v="all">Tutti</button><button data-v="online">Online</button><button data-v="paper">Cartacei</button>
+      </div>
+      <div class="chips" role="group" aria-label="Dimensione del torneo" data-filter="tiers">
+        <button data-v="large"><i class="tier-dot large"></i>Grandi</button>
+        <button data-v="medium"><i class="tier-dot medium"></i>Medi</button>
+        <button data-v="small"><i class="tier-dot small"></i>Piccoli</button>
+        <button data-v="league"><i class="tier-dot league"></i>Leghe 5-0</button>
+      </div>
+      <div class="seg" role="group" aria-label="Piazzamento" data-filter="place">
+        <button data-v="all">Tutte le liste</button><button data-v="top8">Top 8</button><button data-v="win">Vincitori</button>
+      </div>
+      <a class="filter-help" href="#/metodo">Come leggere i dati</a>
     </div>
-    <div class="muted">Fonti: MTGO (mtgo.com), Melee.gg, Topdeck.gg e altre tramite MTGODecklistCache; MTGTop8.
-      Archetipi: regole MTGOFormatData. Progetto non ufficiale, non affiliato a Wizards of the Coast.</div>
+  </div>
+
+  <main id="app" class="wrap" tabindex="-1"><div class="loading"><span></span></div></main>
+
+  <footer class="foot">
+    <div class="wrap foot-grid">
+      <div>
+        <div class="brand small"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M9 22V10l7 8 7-8v12"/></svg><span>Metagame</span></div>
+        <p id="updated" class="muted"></p>
+        <p class="muted"><a href="#/metodo">Metodo e fonti</a></p>
+      </div>
+      <div>
+        <h4>Dati aperti</h4>
+        <p class="muted">Tutto il database, scaricabile e lavorabile:</p>
+        <p class="dl">
+          <a href="data/export/mtg-meta.sqlite">SQLite</a>
+          <a href="data/export/decks.csv">liste.csv</a>
+          <a href="data/export/deck_cards.csv">carte per lista.csv</a>
+          <a href="data/export/archetype_card_stats.csv">composizione archetipi.csv</a>
+          <a href="data/export/archetype_results.csv">risultati per fascia.csv</a>
+          <a href="data/export/tournaments.csv">tornei.csv</a>
+        </p>
+      </div>
+      <div class="legal muted">
+        Fonti: mtgo.com, Melee.gg, Topdeck.gg, CardsRealm, GetPaird (via MTGODecklistCache), MTGTop8.
+        Immagini e dati delle carte: <a href="https://scryfall.com" target="_blank" rel="noopener">Scryfall</a>; illustrazioni © dei rispettivi artisti.
+        Metagame è materiale non ufficiale consentito dalla Fan Content Policy. Non approvato/supportato da Wizards.
+        Parti dei materiali utilizzati sono di proprietà di Wizards of the Coast. ©Wizards of the Coast LLC.
+      </div>
+    </div>
   </footer>
+
+  <div id="preview" class="card-preview" aria-hidden="true"><img alt=""></div>
   <script src="app.js"></script>
 </body>
 </html>

@@ -40,20 +40,21 @@ jobs:
           --days ${{ inputs.days || '3' }}
           --mtgtop8-requests ${{ inputs.mtgtop8_requests || '200' }}
 
-      - name: Salva l'archivio grezzo nel repository
+      - name: Classifica e genera il sito
+        run: python -m mtgmeta build --site-days 90
+
+      - name: Salva l'archivio grezzo e la cache carte nel repository
         run: |
           git config user.name "mtg-meta-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tournaments data/state.json
+          git add data/tournaments data/state.json data/cards.json
           if git diff --cached --quiet; then
-            echo "Nessun torneo nuovo"
+            echo "Nessun dato nuovo"
           else
             git commit -m "Dati: aggiornamento $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git pull --rebase
             git push
           fi
-
-      - name: Classifica e genera il sito
-        run: python -m mtgmeta build --site-days 90
 
       - uses: actions/upload-pages-artifact@v3
         with:

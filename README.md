@@ -22,6 +22,19 @@ Gli archetipi vengono riconosciuti con le regole pubbliche di [MTGOFormatData](h
 Le liste non riconosciute vengono raggruppate per colori, es. "Izzet (Other)". Puoi aggiungere regole
 tue in [`rules/`](rules/README.md).
 
+## Qualità del dato
+
+- **Fascia di ogni torneo** (`mtgmeta/events.py`):
+  - **Grande**: 100 giocatori o più, oppure eventi premier come Pro Tour, Regional e Showcase.
+  - **Medio**: da 32 a 99 giocatori, oppure Challenge MTGO e RCQ di cui non si conoscono i numeri.
+  - **Piccolo**: meno di 32 giocatori.
+  - **Lega 5-0**: Leghe MTGO, che non hanno classifica.
+
+  Le Challenge MTGO pubblicano solo la top 32, quindi il loro numero di iscritti viene marcato come *non noto*.
+- **Punti** di ogni lista: `log2(giocatori / piazzamento)`, cioè quanto è raro il risultato. Vincere su 8 vale 3, vincere su 64 vale 6, arrivare 6° su 407 vale circa 6. Quando gli iscritti non sono noti si usano stime prudenti. Da qui nasce l'indice "Risultati" degli archetipi.
+- **Varianti**: clustering k-medoids, con distanza di Jaccard pesata sulle sole carte "flessibili". Le varianti vengono tenute solo se i gruppi sono ben separati (silhouette > 0,12) e abbastanza grandi.
+- **Carte**: tipo, costo, curva di mana e immagini arrivano da Scryfall, con una cache in `data/cards.json`.
+
 ## Struttura
 
 ```

@@ -66,6 +66,42 @@ def card_key(name: str) -> str:
     return re.sub(r"\s+", " ", name).casefold()
 
 
+_SET_SUFFIX = re.compile(r"\s*\([A-Za-z0-9#]{2,6}\)\s*[A-Za-z0-9★#-]*\s*(\*[A-Za-z]\*)?\s*$")
+_FOIL_SUFFIX = re.compile(r"\s*\*[A-Za-z]\*\s*$")
+_PACKED = re.compile(r"(\d+)\s+(.+?)(?=\s+\d+\s+\D|$)")
+
+
+def clean_card_list(cards: list) -> list:
+    """Ripulisce i nomi "sporchi" che alcune fonti pubblicano:
+    'Arid Mesa (MH2) 244 *F*' -> 'Arid Mesa'; 'Ajani, Nacatl Pariah / Ajani, Nacatl Avenger' -> fronte;
+    '1 Tectonic Edge 1 Command Beacon ...' (lista incollata in un solo nome) -> più carte.
+    Le copie della stessa carta vengono poi sommate."""
+    out: dict[str, list] = {}
+    for qty, name in cards:
+        name = (name or "").strip()
+        expanded = [(qty, name)]
+        if re.match(r"^\d+\s+\D", name):
+            parts = _PACKED.findall(name)
+            if len(parts) >= 2:
+                expanded = [(int(q) * qty if qty > 1 else int(q), n) for q, n in parts]
+            else:
+                m = re.match(r"^(\d+)\s+(.+)$", name)
+                expanded = [(int(m.group(1)), m.group(2))]
+        for q, n in expanded:
+            n = _FOIL_SUFFIX.sub("", _SET_SUFFIX.sub("", n)).strip()
+            n = re.sub(r"(?<=[a-z])/(?=[A-Z])", " // ", n)  # "Cease/Desist" -> "Cease // Desist"
+            if " // " not in n and " / " in n:
+                n = n.split(" / ")[0].strip()
+            if not n:
+                continue
+            k = card_key(n)
+            if k in out:
+                out[k][0] += int(q)
+            else:
+                out[k] = [int(q), n]
+    return list(out.values())
+
+
 def front_name(name: str) -> str:
     return name.split("//")[0].strip()
 
