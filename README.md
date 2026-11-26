@@ -24,6 +24,12 @@ tue in [`rules/`](rules/README.md).
 
 ## Qualità del dato
 
+Ogni torneo e ogni lista passano dal controllo qualità (`mtgmeta/quality.py`). Tutto ciò che viene scartato
+finisce in `data/export/excluded.csv`, con il motivo:
+- **tornei duplicati**: lo stesso evento pubblicato due volte. Succede ad esempio perché MTGO riusa gli indirizzi delle pagine. I due tornei vengono uniti se l'80% delle liste coincide e se sono dello stesso tipo, con nomi simili; si tiene la fonte più autorevole;
+- **liste non valide**: main sotto le 60 o sopra le 90 carte, sideboard sopra le 15, più di 4 copie di una carta che non sia una terra base, dimensione sbagliata nei formati Commander;
+- **tornei con meno di 16 giocatori**, quando il numero di giocatori è noto.
+
 - **Fascia di ogni torneo** (`mtgmeta/events.py`):
   - **Grande**: 100 giocatori o più, oppure eventi premier come Pro Tour, Regional e Showcase.
   - **Medio**: da 32 a 99 giocatori, oppure Challenge MTGO e RCQ di cui non si conoscono i numeri.

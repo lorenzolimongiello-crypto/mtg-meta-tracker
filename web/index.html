@@ -1,38 +1,43 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Metagame — il metagame di Magic, raccontato</title>
-  <meta name="description" content="Tutti i risultati dei tornei di Magic: The Gathering, online e cartacei, in un unico posto. Quali mazzi vincono, con quali carte, in quali tornei. Aggiornato ogni 12 ore.">
+  <title>Metagame — Magic: The Gathering tournament results, explained</title>
+  <meta name="description" content="Every Magic: The Gathering tournament result, online and paper, in one place — curated, de-duplicated and explained. Which decks win, with which cards, in which events. Updated every 12 hours.">
   <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23a8452b'/%3E%3Cpath d='M9 22V10l7 8 7-8v12' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cards.scryfall.io" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>
     try { const t = localStorage.getItem("mm-theme"); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
   </script>
 </head>
 <body>
-  <a class="skip" href="#app">Vai al contenuto</a>
+  <a class="skip" href="#app">Skip to content</a>
+
   <header class="masthead">
     <div class="wrap mast-row">
-      <a class="brand" href="#/" aria-label="Metagame, home">
+      <a class="brand" href="#/" aria-label="Metagame home">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M9 22V10l7 8 7-8v12"/></svg>
         <span>Metagame</span>
       </a>
-      <nav id="formats" class="format-nav" aria-label="Formati"></nav>
+      <div class="picker">
+        <button id="fmt-btn" class="fmt-btn" type="button" aria-haspopup="true" aria-expanded="false" hidden>
+          <span id="fmt-label">Format</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+        </button>
+        <div id="fmt-menu" class="fmt-menu" role="menu" hidden></div>
+      </div>
       <div class="mast-tools">
-        <div class="search" role="search">
+        <button id="search-btn" class="icon-btn" type="button" aria-label="Search cards and decks">
           <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg>
-          <input id="q" type="search" placeholder="Cerca una carta o un mazzo" autocomplete="off" aria-label="Cerca una carta o un mazzo" aria-controls="q-results" aria-expanded="false">
-          <div id="q-results" class="search-results" role="listbox" hidden></div>
-        </div>
-        <button id="theme" class="icon-btn" type="button" aria-label="Cambia tema">
+        </button>
+        <button id="theme" class="icon-btn" type="button" aria-label="Switch light / dark theme">
           <svg class="i-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 1.5v2.2M10 16.3v2.2M1.5 10h2.2M16.3 10h2.2M4 4l1.6 1.6M14.4 14.4 16 16M4 16l1.6-1.6M14.4 5.6 16 4"/></svg>
           <svg class="i-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 12.6A7 7 0 0 1 7.4 3.5a7 7 0 1 0 9.1 9.1Z"/></svg>
         </button>
@@ -40,56 +45,77 @@
     </div>
   </header>
 
-  <div id="filters" class="filters" hidden>
-    <div class="wrap filter-row">
-      <div class="seg" role="group" aria-label="Periodo" data-filter="days">
-        <button data-v="7">7 giorni</button><button data-v="30">30 giorni</button><button data-v="90">90 giorni</button>
-      </div>
-      <div class="seg" role="group" aria-label="Tipo di evento" data-filter="type">
-        <button data-v="all">Tutti</button><button data-v="online">Online</button><button data-v="paper">Cartacei</button>
-      </div>
-      <div class="chips" role="group" aria-label="Dimensione del torneo" data-filter="tiers">
-        <button data-v="large"><i class="tier-dot large"></i>Grandi</button>
-        <button data-v="medium"><i class="tier-dot medium"></i>Medi</button>
-        <button data-v="small"><i class="tier-dot small"></i>Piccoli</button>
-        <button data-v="league"><i class="tier-dot league"></i>Leghe 5-0</button>
-      </div>
-      <div class="seg" role="group" aria-label="Piazzamento" data-filter="place">
-        <button data-v="all">Tutte le liste</button><button data-v="top8">Top 8</button><button data-v="win">Vincitori</button>
-      </div>
-      <a class="filter-help" href="#/metodo">Come leggere i dati</a>
-    </div>
-  </div>
-
-  <main id="app" class="wrap" tabindex="-1"><div class="loading"><span></span></div></main>
+  <main id="app" tabindex="-1"><div class="loading"><span></span></div></main>
 
   <footer class="foot">
     <div class="wrap foot-grid">
       <div>
         <div class="brand small"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M9 22V10l7 8 7-8v12"/></svg><span>Metagame</span></div>
+        <p class="credits">Created by <b>Lorenzo Limongiello</b><br>
+          <a href="https://x.com/LorenzoLimongi1" target="_blank" rel="noopener me">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23.3 22h-6.6l-5.2-6.8L5.5 22H2.4l7.7-8.8L1.9 2h6.8l4.7 6.2L18.9 2Zm-1.1 18h1.7L7.4 3.9H5.6L17.8 20Z"/></svg>
+            @LorenzoLimongi1</a></p>
         <p id="updated" class="muted"></p>
-        <p class="muted"><a href="#/metodo">Metodo e fonti</a></p>
       </div>
       <div>
-        <h4>Dati aperti</h4>
-        <p class="muted">Tutto il database, scaricabile e lavorabile:</p>
+        <h4>Explore</h4>
+        <p><a href="#/about">How we collect and rank the data</a></p>
+        <p class="muted">Open data — the whole database, free to download:</p>
         <p class="dl">
           <a href="data/export/mtg-meta.sqlite">SQLite</a>
-          <a href="data/export/decks.csv">liste.csv</a>
-          <a href="data/export/deck_cards.csv">carte per lista.csv</a>
-          <a href="data/export/archetype_card_stats.csv">composizione archetipi.csv</a>
-          <a href="data/export/archetype_results.csv">risultati per fascia.csv</a>
-          <a href="data/export/tournaments.csv">tornei.csv</a>
+          <a href="data/export/decks.csv">lists.csv</a>
+          <a href="data/export/deck_cards.csv">cards per list.csv</a>
+          <a href="data/export/archetype_card_stats.csv">archetype composition.csv</a>
+          <a href="data/export/tournaments.csv">tournaments.csv</a>
+          <a href="data/export/excluded.csv">excluded data.csv</a>
         </p>
       </div>
       <div class="legal muted">
-        Fonti: mtgo.com, Melee.gg, Topdeck.gg, CardsRealm, GetPaird (via MTGODecklistCache), MTGTop8.
-        Immagini e dati delle carte: <a href="https://scryfall.com" target="_blank" rel="noopener">Scryfall</a>; illustrazioni © dei rispettivi artisti.
-        Metagame è materiale non ufficiale consentito dalla Fan Content Policy. Non approvato/supportato da Wizards.
-        Parti dei materiali utilizzati sono di proprietà di Wizards of the Coast. ©Wizards of the Coast LLC.
+        Sources: mtgo.com, Melee.gg, Topdeck.gg, CardsRealm, GetPaird (via MTGODecklistCache) and MTGTop8.
+        Card images and data: <a href="https://scryfall.com" target="_blank" rel="noopener">Scryfall</a>; artwork © the respective artists.
+        Metagame is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards.
+        Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
       </div>
     </div>
   </footer>
+
+  <!-- filter sheet -->
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <section class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <header class="sheet-head"><h2 id="sheet-title">Filters</h2><button class="icon-btn" data-close aria-label="Close filters"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg></button></header>
+      <div class="sheet-body">
+        <div class="field"><span class="field-l">Period</span>
+          <div class="seg" role="group" aria-label="Period" data-filter="days"><button data-v="7">7 days</button><button data-v="30">30 days</button><button data-v="90">90 days</button></div></div>
+        <div class="field"><span class="field-l">Events</span>
+          <div class="seg" role="group" aria-label="Event type" data-filter="type"><button data-v="all">All</button><button data-v="online">Online</button><button data-v="paper">Paper</button></div></div>
+        <div class="field"><span class="field-l">Tournament size</span>
+          <div class="chips" role="group" aria-label="Tournament size" data-filter="tiers">
+            <button data-v="large"><i class="tier-dot large"></i>Large <small>100+</small></button>
+            <button data-v="medium"><i class="tier-dot medium"></i>Medium <small>32–99</small></button>
+            <button data-v="small"><i class="tier-dot small"></i>Small <small>16–31</small></button>
+          </div></div>
+        <div class="field row"><span><span class="field-l">MTGO Leagues</span><small class="muted">5-0 lists published by Wizards. Good to see what's played online; no standings.</small></span>
+          <button class="switch" role="switch" aria-checked="true" data-filter="leagues" aria-label="Include MTGO Leagues"><i></i></button></div>
+        <div class="field"><span class="field-l">Placement</span>
+          <div class="seg" role="group" aria-label="Placement" data-filter="place"><button data-v="all">All lists</button><button data-v="top8">Top 8</button><button data-v="win">Winners</button></div></div>
+      </div>
+      <footer class="sheet-foot"><button class="btn" data-reset>Reset</button><button class="btn primary" data-close>Show results</button></footer>
+    </section>
+  </div>
+
+  <!-- search -->
+  <div id="search" class="search-pop" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search">
+      <div class="search-field">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg>
+        <input id="q" type="search" placeholder="Search a card or a deck" autocomplete="off" aria-controls="q-results">
+        <button class="icon-btn" data-close aria-label="Close search"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg></button>
+      </div>
+      <div id="q-results" class="search-results" role="listbox"></div>
+    </div>
+  </div>
 
   <div id="preview" class="card-preview" aria-hidden="true"><img alt=""></div>
   <script src="app.js"></script>
