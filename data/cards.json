@@ -4261,6 +4261,19 @@
 "type_line": "Snow Land — Forest Plains",
 "uri": "https://scryfall.com/card/khm/249/arctic-treeline"
 },
+"arcum dagsson": {
+"art": "front/f/5/f5ecf811-2efc-4fa6-9af8-ef09f559ec1a.jpg?1783930205",
+"artist": "Pete Venters",
+"cmc": 4.0,
+"colors": "U",
+"img": "front/f/5/f5ecf811-2efc-4fa6-9af8-ef09f559ec1a.jpg?1783930205",
+"mana": "{3}{U}",
+"name": "Arcum Dagsson",
+"rarity": "mythic",
+"type": "Creature",
+"type_line": "Legendary Creature — Human Artificer",
+"uri": "https://scryfall.com/card/2xm/41/arcum-dagsson"
+},
 "arcum's astrolabe": {
 "art": "front/c/2/c2462fdf-a594-47d0-8e10-b55901e350d9.jpg?1783933075",
 "artist": "Igor Kieryluk",
@@ -18262,6 +18275,19 @@
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/lci/98/corpses-of-the-lost"
 },
+"corridor monitor": {
+"art": "front/d/f/df3f6598-18a7-472d-8d05-715203379089.jpg?1783930201",
+"artist": "Jason Felix",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/d/f/df3f6598-18a7-472d-8d05-715203379089.jpg?1783930201",
+"mana": "{1}{U}",
+"name": "Corridor Monitor",
+"rarity": "common",
+"type": "Creature",
+"type_line": "Artifact Creature — Construct",
+"uri": "https://scryfall.com/card/2xm/46/corridor-monitor"
+},
 "corroding dragonstorm": {
 "art": "front/e/2/e2a2d395-26d6-4eb2-9e8c-ed7dbbd3a8f5.jpg?1783907380",
 "artist": "Sergey Glushakov",
@@ -19210,6 +19236,19 @@
 "type": "Instant",
 "type_line": "Instant",
 "uri": "https://scryfall.com/card/m15/138/crowds-favor"
+},
+"crown of awe": {
+"art": "front/a/e/aeaea4bc-dcea-4340-a039-ebc97b944673.jpg?1783945101",
+"artist": "Randy Elliott",
+"cmc": 2.0,
+"colors": "W",
+"img": "front/a/e/aeaea4bc-dcea-4340-a039-ebc97b944673.jpg?1783945101",
+"mana": "{1}{W}",
+"name": "Crown of Awe",
+"rarity": "common",
+"type": "Enchantment",
+"type_line": "Enchantment — Aura",
+"uri": "https://scryfall.com/card/ons/16/crown-of-awe"
 },
 "crucible of worlds": {
 "art": "front/7/f/7f4893ef-f983-418b-b7a4-5f073c844545.jpg?1783921793",
@@ -23318,6 +23357,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/cma/54/diabolic-tutor"
+},
+"diamond lion": {
+"art": "front/3/1/317a8ed5-1ec2-4a5d-a606-8c6ba781c8a3.jpg?1783926805",
+"artist": "Howard Lyon",
+"cmc": 2.0,
+"colors": "",
+"img": "front/3/1/317a8ed5-1ec2-4a5d-a606-8c6ba781c8a3.jpg?1783926805",
+"mana": "{2}",
+"name": "Diamond Lion",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Artifact Creature — Cat",
+"uri": "https://scryfall.com/card/mh2/225/diamond-lion"
 },
 "diamond pick-axe": {
 "art": "front/4/a/4ae30fa7-3d1d-417f-80d7-a668236cb2c1.jpg?1783913764",
@@ -28753,6 +28805,19 @@
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/uds/59/encroach"
 },
+"encroaching mycosynth": {
+"art": "front/6/5/65a2fcc9-2317-48a1-a5eb-234fb3300364.jpg?1783918066",
+"artist": "Martin de Diego Sádaba",
+"cmc": 4.0,
+"colors": "U",
+"img": "front/6/5/65a2fcc9-2317-48a1-a5eb-234fb3300364.jpg?1783918066",
+"mana": "{3}{U}",
+"name": "Encroaching Mycosynth",
+"rarity": "rare",
+"type": "Artifact",
+"type_line": "Artifact",
+"uri": "https://scryfall.com/card/one/47/encroaching-mycosynth"
+},
 "end of the hunt": {
 "art": "front/0/8/0809b51a-6a05-4f18-9bf4-1b8382da648f.jpg?1783903680",
 "artist": "Alexandre Honoré",
@@ -29103,6 +29168,19 @@
 "type": "Creature",
 "type_line": "Creature — Human Soldier",
 "uri": "https://scryfall.com/card/apc/9/enlistment-officer"
+},
+"ennis, debate moderator": {
+"art": "front/d/2/d2ef31b4-24fa-4443-9f05-c8e99c3522e5.jpg?1783903705",
+"artist": "Marie Magny",
+"cmc": 2.0,
+"colors": "W",
+"img": "front/d/2/d2ef31b4-24fa-4443-9f05-c8e99c3522e5.jpg?1783903705",
+"mana": "{1}{W}",
+"name": "Ennis, Debate Moderator",
+"rarity": "uncommon",
+"type": "Creature",
+"type_line": "Legendary Creature — Human Cleric",
+"uri": "https://scryfall.com/card/sos/14/ennis-debate-moderator"
 },
 "enslaved dwarf": {
 "art": "front/d/a/da5003a6-211e-43d3-9a3c-756496357163.jpg?1783945149",
@@ -31509,6 +31587,19 @@
 "type_line": "Creature — Human Scout",
 "uri": "https://scryfall.com/card/bro/48/fallaji-archaeologist"
 },
+"fallaji wayfarer": {
+"art": "front/b/c/bc2378b2-96e2-44ca-8434-9f06c26b183d.jpg?1783921474",
+"artist": "Victor Adame Minguez",
+"cmc": 3.0,
+"colors": "G",
+"img": "front/b/c/bc2378b2-96e2-44ca-8434-9f06c26b183d.jpg?1783921474",
+"mana": "{2}{G}",
+"name": "Fallaji Wayfarer",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Human Scout",
+"uri": "https://scryfall.com/card/dmc/11/fallaji-wayfarer"
+},
 "fallen shinobi": {
 "art": "front/9/7/979076a7-313f-4227-a4c3-548e86997e0a.jpg?1783911903",
 "artist": "Dmitry Burmak",
@@ -32938,6 +33029,19 @@
 "type": "Creature",
 "type_line": "Artifact Creature — Fox",
 "uri": "https://scryfall.com/card/cmr/308/filigree-familiar"
+},
+"filigree sages": {
+"art": "front/0/8/08790aaf-0142-4b20-89cf-cdaffeea4582.jpg?1783942574",
+"artist": "Dan Murayama Scott",
+"cmc": 4.0,
+"colors": "U",
+"img": "front/0/8/08790aaf-0142-4b20-89cf-cdaffeea4582.jpg?1783942574",
+"mana": "{3}{U}",
+"name": "Filigree Sages",
+"rarity": "uncommon",
+"type": "Creature",
+"type_line": "Artifact Creature — Vedalken Wizard",
+"uri": "https://scryfall.com/card/ala/44/filigree-sages"
 },
 "filter out": {
 "art": "front/a/8/a81a9eb1-240b-40fd-9282-0f5abec63449.jpg?1783916527",
@@ -38620,6 +38724,19 @@
 "type_line": "Artifact — Equipment",
 "uri": "https://scryfall.com/card/dsk/249/glimmerlight"
 },
+"glimmerpoint stag": {
+"art": "front/6/3/63205c2a-e9d4-4354-b519-9e84be8f9eb7.jpg?1783937632",
+"artist": "Ryan Pancoast",
+"cmc": 4.0,
+"colors": "W",
+"img": "front/6/3/63205c2a-e9d4-4354-b519-9e84be8f9eb7.jpg?1783937632",
+"mana": "{2}{W}{W}",
+"name": "Glimmerpoint Stag",
+"rarity": "uncommon",
+"type": "Creature",
+"type_line": "Creature — Elk",
+"uri": "https://scryfall.com/card/ema/12/glimmerpoint-stag"
+},
 "glimmerpost": {
 "art": "front/8/b/8b63efb6-249c-4f57-9af1-baffe938520c.jpg?1783941691",
 "artist": "Matt Cavotta",
@@ -39906,6 +40023,19 @@
 "type": "Land",
 "type_line": "Land — Town",
 "uri": "https://scryfall.com/card/fin/278/gohn-town-of-ruin"
+},
+"golbez, crystal collector": {
+"art": "front/8/4/849f5716-7211-4e93-a220-f88d49f937f4.jpg?1783906570",
+"artist": "Bachzim",
+"cmc": 2.0,
+"colors": "BU",
+"img": "front/8/4/849f5716-7211-4e93-a220-f88d49f937f4.jpg?1783906570",
+"mana": "{U}{B}",
+"name": "Golbez, Crystal Collector",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Legendary Creature — Human Wizard",
+"uri": "https://scryfall.com/card/fin/225/golbez-crystal-collector"
 },
 "gold pan": {
 "art": "front/d/c/dc098aae-3d9b-453b-a37e-e102f81a8311.jpg?1783911780",
@@ -41662,6 +41792,19 @@
 "type_line": "Creature — Spirit Knight",
 "uri": "https://scryfall.com/card/soc/148/guardian-of-faith"
 },
+"guardian of ghirapur": {
+"art": "front/9/5/9503a1e6-f0bf-44d0-a28b-56fbfcff1ff2.jpg?1783917062",
+"artist": "Cynthia Sheppard",
+"cmc": 3.0,
+"colors": "W",
+"img": "front/9/5/9503a1e6-f0bf-44d0-a28b-56fbfcff1ff2.jpg?1783917062",
+"mana": "{2}{W}",
+"name": "Guardian of Ghirapur",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Angel",
+"uri": "https://scryfall.com/card/mom/16/guardian-of-ghirapur"
+},
 "guardian of new benalia": {
 "art": "front/4/3/43da76ee-fec3-4b2e-915d-10cf8d518d2c.jpg?1783921365",
 "artist": "Ernanda Souza",
@@ -42038,6 +42181,19 @@
 "type": "Creature",
 "type_line": "Legendary Creature — Demon Kraken",
 "uri": "https://scryfall.com/card/iko/221/gyruda-doom-of-depths"
+},
+"h.e.r.b.i.e., lovable robot": {
+"art": "front/5/e/5e2f9f4c-dbdd-4da6-b08f-1f4d3fcb1328.jpg?1783903259",
+"artist": "Nanna Marie Steffensen",
+"cmc": 2.0,
+"colors": "",
+"img": "front/5/e/5e2f9f4c-dbdd-4da6-b08f-1f4d3fcb1328.jpg?1783903259",
+"mana": "{2}",
+"name": "H.E.R.B.I.E., Lovable Robot",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Legendary Artifact Creature — Robot Scout",
+"uri": "https://scryfall.com/card/msc/106/herbie-lovable-robot"
 },
 "hada freeblade": {
 "art": "front/2/2/22700453-e1aa-43d1-9b51-cda8a37fc00d.jpg?1783942068",
@@ -53167,6 +53323,19 @@
 "type_line": "Creature — Bird Advisor",
 "uri": "https://scryfall.com/card/snc/46/ledger-shredder"
 },
+"leech bonder": {
+"art": "front/a/8/a86562c6-91bd-4866-a2a9-0062ffdf07ce.jpg?1783942760",
+"artist": "E. M. Gist",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/a/8/a86562c6-91bd-4866-a2a9-0062ffdf07ce.jpg?1783942760",
+"mana": "{2}{U}",
+"name": "Leech Bonder",
+"rarity": "uncommon",
+"type": "Creature",
+"type_line": "Creature — Merfolk Soldier",
+"uri": "https://scryfall.com/card/shm/43/leech-bonder"
+},
 "leechridden swamp": {
 "art": "front/a/0/a07a0e31-ace6-40ad-8700-2d58135b5320.jpg?1783909573",
 "artist": "Drew Tucker",
@@ -54763,6 +54932,19 @@
 "type": "Creature",
 "type_line": "Creature — Cat",
 "uri": "https://scryfall.com/card/ddh/5/loam-lion"
+},
+"loathsome chimera": {
+"art": "front/3/a/3afe6283-3642-4883-ac6e-83ae3280af9c.jpg?1783931537",
+"artist": "Paul Scott Canavan",
+"cmc": 3.0,
+"colors": "G",
+"img": "front/3/a/3afe6283-3642-4883-ac6e-83ae3280af9c.jpg?1783931537",
+"mana": "{2}{G}",
+"name": "Loathsome Chimera",
+"rarity": "common",
+"type": "Creature",
+"type_line": "Creature — Chimera",
+"uri": "https://scryfall.com/card/thb/177/loathsome-chimera"
 },
 "loch mare": {
 "art": "front/a/d/ad6c4baf-a803-45e4-81ac-708a41631a28.jpg?1783904497",
@@ -57427,6 +57609,19 @@
 "type_line": "Legendary Creature — Astartes Warrior",
 "uri": "https://scryfall.com/card/40k/8/marneus-calgar"
 },
+"marooned": {
+"art": "front/0/8/0820a78e-e392-423c-9d62-ddfda5cb3f03.jpg?1793716333",
+"artist": "Joel Chaim Holtzman",
+"cmc": 1.0,
+"colors": "U",
+"img": "front/0/8/0820a78e-e392-423c-9d62-ddfda5cb3f03.jpg?1793716333",
+"mana": "{U}",
+"name": "Marooned",
+"rarity": "common",
+"type": "Enchantment",
+"type_line": "Enchantment — Aura",
+"uri": "https://scryfall.com/card/trk/72/marooned"
+},
 "marrow-gnawer": {
 "art": "front/7/2/72e4548b-c171-4f10-b896-af37543dcf0f.jpg?1783944312",
 "artist": "Wayne Reynolds",
@@ -58752,6 +58947,19 @@
 "type": "Creature",
 "type_line": "Artifact Creature — Construct",
 "uri": "https://scryfall.com/card/uds/135/metalworker"
+},
+"metamorphic alteration": {
+"art": "front/e/f/eff03d37-d90a-4dcc-bacd-64fd71301354.jpg?1783934585",
+"artist": "Livia Prima",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/e/f/eff03d37-d90a-4dcc-bacd-64fd71301354.jpg?1783934585",
+"mana": "{1}{U}",
+"name": "Metamorphic Alteration",
+"rarity": "rare",
+"type": "Enchantment",
+"type_line": "Enchantment — Aura",
+"uri": "https://scryfall.com/card/m19/60/metamorphic-alteration"
 },
 "metamorphic blast": {
 "art": "front/b/d/bd38d922-cfc1-43a8-82d8-5de441c71076.jpg?1783911842",
@@ -62262,6 +62470,19 @@
 "type": "Creature",
 "type_line": "Artifact Creature — Myr",
 "uri": "https://scryfall.com/card/uma/230/myr-servitor"
+},
+"myr sire": {
+"art": "front/1/1/11ba43d1-e879-40e0-b49c-e009deb7e3aa.jpg?1783915594",
+"artist": "Jaime Jones",
+"cmc": 2.0,
+"colors": "",
+"img": "front/1/1/11ba43d1-e879-40e0-b49c-e009deb7e3aa.jpg?1783915594",
+"mana": "{2}",
+"name": "Myr Sire",
+"rarity": "common",
+"type": "Creature",
+"type_line": "Artifact Creature — Phyrexian Myr",
+"uri": "https://scryfall.com/card/cmm/400/myr-sire"
 },
 "myrel, shield of argive": {
 "art": "front/e/6/e632ed57-bb00-4493-adef-7b4805edd7ea.jpg?1783920129",
@@ -66670,6 +66891,19 @@
 "type_line": "Enchantment — Aura",
 "uri": "https://scryfall.com/card/pip/18/overencumbered"
 },
+"overflowing basin": {
+"art": "front/6/3/6357d665-2b28-4747-ab43-b90176d78d42.jpg?1783903723",
+"artist": "Sarah Finnigan",
+"cmc": 0,
+"colors": "GU",
+"img": "front/6/3/6357d665-2b28-4747-ab43-b90176d78d42.jpg?1783903723",
+"mana": "",
+"name": "Overflowing Basin",
+"rarity": "rare",
+"type": "Land",
+"type_line": "Land",
+"uri": "https://scryfall.com/card/soc/392/overflowing-basin"
+},
 "overgrown battlement": {
 "art": "front/6/8/680f6308-4469-4565-873e-40fb5aaef27d.jpg?1783907042",
 "artist": "Franz Vohwinkel",
@@ -68528,6 +68762,19 @@
 "type": "Land",
 "type_line": "Land",
 "uri": "https://scryfall.com/card/sos/259/petrified-hamlet"
+},
+"petrify": {
+"art": "front/b/b/bbc5f28f-6361-455f-ac82-260a70e59316.jpg?1783913805",
+"artist": "Samuel Araya",
+"cmc": 2.0,
+"colors": "W",
+"img": "front/b/b/bbc5f28f-6361-455f-ac82-260a70e59316.jpg?1783913805",
+"mana": "{1}{W}",
+"name": "Petrify",
+"rarity": "common",
+"type": "Enchantment",
+"type_line": "Enchantment — Aura",
+"uri": "https://scryfall.com/card/lci/30/petrify"
 },
 "phantasmagorian": {
 "art": "front/1/9/19bcd780-70a6-4c25-8611-8b750a50aa3d.jpg?1783943153",
@@ -74756,6 +75003,19 @@
 "type_line": "Instant",
 "uri": "https://scryfall.com/card/eld/135/redcap-melee"
 },
+"redemption choir": {
+"art": "front/9/8/981dcacb-24a3-43bb-bb64-2b227f31dc3e.jpg?1783913912",
+"artist": "Michele Giorgi",
+"cmc": 4.0,
+"colors": "W",
+"img": "front/9/8/981dcacb-24a3-43bb-bb64-2b227f31dc3e.jpg?1783913912",
+"mana": "{2}{W}{W}",
+"name": "Redemption Choir",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Vampire Cleric",
+"uri": "https://scryfall.com/card/lcc/74/redemption-choir"
+},
 "redirect lightning": {
 "art": "front/2/b/2b5b14a7-1fdd-4efc-b197-cadfa7f7c860.jpg?1783904953",
 "artist": "Toni Infante",
@@ -76639,6 +76899,19 @@
 "type_line": "Legendary Artifact",
 "uri": "https://scryfall.com/card/fin/269/ring-of-the-lucii"
 },
+"rings of brighthearth": {
+"art": "front/8/3/838ffc87-517a-4d94-8ce0-bc9ed01ecc52.jpg?1783928748",
+"artist": "Howard Lyon",
+"cmc": 3.0,
+"colors": "",
+"img": "front/8/3/838ffc87-517a-4d94-8ce0-bc9ed01ecc52.jpg?1783928748",
+"mana": "{3}",
+"name": "Rings of Brighthearth",
+"rarity": "rare",
+"type": "Artifact",
+"type_line": "Artifact",
+"uri": "https://scryfall.com/card/cmr/335/rings-of-brighthearth"
+},
 "rionya, fire dancer": {
 "art": "front/0/8/086e68b5-0f89-46d0-9a04-7f8658a9ab53.jpg?1783903772",
 "artist": "Heonhwa",
@@ -78147,6 +78420,19 @@
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/2xm/66/rush-of-knowledge"
 },
+"rushed rebirth": {
+"art": "front/0/7/07b7c952-5ab7-4546-8369-4d213bf868bf.jpg?1783927295",
+"artist": "Jason Kang",
+"cmc": 2.0,
+"colors": "BG",
+"img": "front/0/7/07b7c952-5ab7-4546-8369-4d213bf868bf.jpg?1783927295",
+"mana": "{B}{G}",
+"name": "Rushed Rebirth",
+"rarity": "rare",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/stx/228/rushed-rebirth"
+},
 "rushing river": {
 "art": "front/5/2/52ddf7bf-de9c-4657-8d5b-79869d36fa63.jpg?1783945624",
 "artist": "Don Hazeltine",
@@ -78679,6 +78965,19 @@
 "type": "Creature",
 "type_line": "Artifact Creature — Golem",
 "uri": "https://scryfall.com/card/2xm/104/salvage-titan"
+},
+"salvation swan": {
+"art": "front/b/2/b2656160-d319-4530-a6e5-c418596c3f12.jpg?1783910856",
+"artist": "Christina Kraus",
+"cmc": 4.0,
+"colors": "W",
+"img": "front/b/2/b2656160-d319-4530-a6e5-c418596c3f12.jpg?1783910856",
+"mana": "{3}{W}",
+"name": "Salvation Swan",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Bird Cleric",
+"uri": "https://scryfall.com/card/blb/28/salvation-swan"
 },
 "sam's desperate rescue": {
 "art": "front/b/d/bdd4d735-8cda-47c1-865b-48b51ac8f666.jpg?1783916295",
@@ -84231,6 +84530,19 @@
 "type_line": "Artifact Creature — Mercenary",
 "uri": "https://scryfall.com/card/otj/248/silver-deputy"
 },
+"silver myr": {
+"art": "front/3/e/3ebcc053-21c6-4708-b9fc-532e3749962f.jpg?1783923938",
+"artist": "Kev Walker",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/3/e/3ebcc053-21c6-4708-b9fc-532e3749962f.jpg?1783923938",
+"mana": "{2}",
+"name": "Silver Myr",
+"rarity": "common",
+"type": "Creature",
+"type_line": "Artifact Creature — Myr",
+"uri": "https://scryfall.com/card/nec/158/silver-myr"
+},
 "silver raven": {
 "art": "front/a/6/a671ec19-32f4-4fde-8ee0-1224471e79db.jpg?1783926507",
 "artist": "Joe Slucher",
@@ -87897,6 +88209,19 @@
 "type_line": "Creature — Sphinx",
 "uri": "https://scryfall.com/card/fdn/747/sphinx-of-the-final-word"
 },
+"sphinx of the second sun": {
+"art": "front/b/e/be2d74cd-76fb-4bca-99b5-07749aef4d06.jpg?1783913012",
+"artist": "Antonio José Manzanedo",
+"cmc": 8.0,
+"colors": "U",
+"img": "front/b/e/be2d74cd-76fb-4bca-99b5-07749aef4d06.jpg?1783913012",
+"mana": "{6}{U}{U}",
+"name": "Sphinx of the Second Sun",
+"rarity": "mythic",
+"type": "Creature",
+"type_line": "Creature — Sphinx",
+"uri": "https://scryfall.com/card/mkc/118/sphinx-of-the-second-sun"
+},
 "sphinx of the steel wind": {
 "art": "front/9/f/9fc9b802-3381-4318-a352-d85451aba586.jpg?1783937550",
 "artist": "Kev Walker",
@@ -90497,6 +90822,19 @@
 "type_line": "Creature — Dragon",
 "uri": "https://scryfall.com/card/tdm/123/stormscale-scion"
 },
+"stormscape familiar": {
+"art": "front/8/6/865e5cdd-566c-4bed-a392-583b71ec2718.jpg?1783943278",
+"artist": "Heather Hudson",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/8/6/865e5cdd-566c-4bed-a392-583b71ec2718.jpg?1783943278",
+"mana": "{1}{U}",
+"name": "Stormscape Familiar",
+"rarity": "special",
+"type": "Creature",
+"type_line": "Creature — Bird",
+"uri": "https://scryfall.com/card/tsb/32/stormscape-familiar"
+},
 "stormshriek feral": {
 "art": "front/0/e/0ec92c44-7cf0-48a5-a3ca-bc633496d887.jpg?1783907352",
 "artist": "Joshua Raphael",
@@ -90990,6 +91328,19 @@
 "type": "Instant",
 "type_line": "Instant",
 "uri": "https://scryfall.com/card/stx/116/sudden-breakthrough"
+},
+"sudden death": {
+"art": "front/5/d/5d724faa-a988-4c08-875d-d18f48926a0a.jpg?1783927808",
+"artist": "Dave Allsop",
+"cmc": 3.0,
+"colors": "B",
+"img": "front/5/d/5d724faa-a988-4c08-875d-d18f48926a0a.jpg?1783927808",
+"mana": "{1}{B}{B}",
+"name": "Sudden Death",
+"rarity": "uncommon",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/tsr/143/sudden-death"
 },
 "sudden demise": {
 "art": "front/9/3/9336cb8a-13d4-4d97-9111-1326a9028df8.jpg?1783936146",
@@ -95033,6 +95384,19 @@
 "type": "Creature",
 "type_line": "Legendary Creature — Human Wizard Warrior // Legendary Enchantment Creature — Saga Wizard",
 "uri": "https://scryfall.com/card/fin/245/terra-magical-adept-esper-terra"
+},
+"terrain elemental": {
+"art": "front/3/2/32b89e5c-ffb4-406f-99d1-ec2797aca061.jpg?1783937136",
+"artist": "Magali Villeneuve",
+"cmc": 2.0,
+"colors": "G",
+"img": "front/3/2/32b89e5c-ffb4-406f-99d1-ec2797aca061.jpg?1783937136",
+"mana": "{1}{G}",
+"name": "Terrain Elemental",
+"rarity": "common",
+"type": "Creature",
+"type_line": "Creature — Elemental",
+"uri": "https://scryfall.com/card/kld/272/terrain-elemental"
 },
 "terramorphic expanse": {
 "art": "front/5/8/58ebd718-982d-4370-b4af-ef49b978d97d.jpg?1793021389",
@@ -106084,6 +106448,19 @@
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/exo/78/volraths-dungeon"
 },
+"volrath's shapeshifter": {
+"art": "front/9/3/93ed24e6-7791-4624-acf2-aa8616035f9e.jpg?1783939296",
+"artist": "Ron Spencer",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/9/3/93ed24e6-7791-4624-acf2-aa8616035f9e.jpg?1783939296",
+"mana": "{1}{U}{U}",
+"name": "Volrath's Shapeshifter",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Phyrexian Shapeshifter",
+"uri": "https://scryfall.com/card/vma/101/volraths-shapeshifter"
+},
 "volrath's stronghold": {
 "art": "front/f/4/f465ae5f-61f0-42c4-978f-841ba1226f56.jpg?1783938438",
 "artist": "Kev Walker",
@@ -106551,6 +106928,19 @@
 "type": "Creature",
 "type_line": "Creature — Shapeshifter Wall",
 "uri": "https://scryfall.com/card/c19/13/wall-of-stolen-identity"
+},
+"wall off": {
+"art": "front/8/5/858182cb-060c-429f-86e9-3d88d2a3b205.jpg?1783903077",
+"artist": "Simon Dominic",
+"cmc": 4.0,
+"colors": "W",
+"img": "front/8/5/858182cb-060c-429f-86e9-3d88d2a3b205.jpg?1783903077",
+"mana": "{3}{W}",
+"name": "Wall Off",
+"rarity": "common",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/msc/614/wall-off"
 },
 "wan shi tong, librarian": {
 "art": "front/e/2/e20da6b5-1057-4a28-9e85-07de714e262f.jpg?1783904979",
