@@ -40,7 +40,7 @@ def classify_event(source: str, name: str, players: int | None, n_decks: int, of
     if mtgo and "challenge" in low and "showcase" not in low:
         kind = "challenge"
         players_known = official and players is not None
-    elif _PREMIER.search(low):
+    elif _PREMIER.search(low) or source == "magic.gg":  # magic.gg only covers Wizards' premier events
         kind = "premier"
         players_known = players is not None and (official or not mtgo)
     elif _QUALIFIER.search(low):

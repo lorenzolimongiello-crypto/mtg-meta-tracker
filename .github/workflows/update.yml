@@ -17,6 +17,9 @@ on:
       mtgo_pages:
         description: "Tetto pagine evento mtgo.com per esecuzione"
         default: "600"
+      topdeck_days:
+        description: "Giorni indietro da leggere su TopDeck.gg (90 per il recupero completo)"
+        default: "4"
 
 permissions:
   contents: write
@@ -41,12 +44,14 @@ jobs:
       - name: Scarica nuovi tornei
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOPDECK_API_KEY: ${{ secrets.TOPDECK_API_KEY }}
         run: >
           python -m mtgmeta update
           --days ${{ inputs.days || '3' }}
           --mtgtop8-requests ${{ inputs.mtgtop8_requests || '200' }}
           --mtgo-days ${{ inputs.mtgo_days || '4' }}
           --mtgo-pages ${{ inputs.mtgo_pages || '600' }}
+          --topdeck-days ${{ inputs.topdeck_days || '4' }}
 
       - name: Classifica e genera il sito
         run: python -m mtgmeta build --site-days 90

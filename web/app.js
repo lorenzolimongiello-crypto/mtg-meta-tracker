@@ -494,6 +494,8 @@ function renderEvent(idx, opts) {
       ${ev.kind === "challenge" && !ev.players ? `<p class="note">For this Challenge we only have the top 32 lists, so the real number of players is not known.</p>` : ""}
       ${ev.kind === "challenge" && ev.players ? `<p class="note">Read directly from mtgo.com: official player count and final standings.</p>` : ""}
       ${ev.tier === "league" ? `<p class="note">MTGO Leagues have no standings: Wizards publishes a selection of 5-0 lists.</p>` : ""}
+      ${ev.source === "magic.gg" && list.some((d) => d.rank == null || /^top/i.test(d.result || "")) ? `<p class="note">Read directly from magic.gg. The official page does not say who finished where, so placements are shown as published (e.g. “Top 16”), never guessed.</p>` : ""}
+      ${ev.source === "topdeck.gg" ? `<p class="note">Official standings and player count from the TopDeck.gg API. Data provided by <a href="https://topdeck.gg" target="_blank" rel="noopener">TopDeck.gg</a>.</p>` : ""}
     </header>
     ${meta.length > 1 ? `<div class="chiplist">${meta.map((a) => `<a href="${archLink(a.arch)}">${pips(a.color)} ${esc(a.arch)}<span>${a.n}</span></a>`).join("")}</div>` : ""}
     <div class="sec" style="margin-top:24px">${listsTable(list, { limit: 200, showArch: true, showEvent: false })}</div></div>`, opts);
@@ -720,7 +722,9 @@ function typesHTML(A, mainCards) {
   return `<h4>By card type</h4><ul>${TYPE_ORDER.filter((k) => t.has(k)).map((k) => `<li><span>${TYPE_L[k]}</span><b>${t.get(k)}</b><span class="bar"><i style="width:${(100 * t.get(k) / tot).toFixed(1)}%"></i></span></li>`).join("")}</ul>`;
 }
 
-const resultText = (d) => d.rank != null ? (d.ev.tier === "league" ? "5-0" : ordinal(d.rank)) : d.wins != null ? `${d.wins}-${d.losses}` : (d.result || "—");
+const resultText = (d) => /^top\s*\d+$/i.test(d.result || "") ? d.result.replace(/^top\s*/i, "Top ")
+  : d.rank != null && d.wins == null && /^\d+\s*-\s*\d+$/.test(d.result || "") ? d.result.split("-").map((x) => ordinal(+x)).join("–") // a range: "5th–8th"
+  : d.rank != null ? (d.ev.tier === "league" ? "5-0" : ordinal(d.rank)) : d.wins != null ? `${d.wins}-${d.losses}` : (d.result || "—");
 let moreState = null;
 function listsTable(list, { limit = 30, showArch = false, showEvent = true } = {}) {
   if (!list.length) return empty("No lists", "");
@@ -850,11 +854,20 @@ function renderAbout() {
       <p class="lede">One good data point is worth more than many. Here is where every number comes from, what we throw away, and why.</p></header>
     <article class="prose">
       <h2>Where the lists come from</h2>
-      <p>Every 12 hours we collect tournaments published by <b>MTGO</b> (Challenges, Leagues, Showcases — read directly from mtgo.com), <b>Melee.gg</b>, <b>Topdeck.gg</b>, <b>CardsRealm</b>, <b>GetPaird</b> (through the public MTGODecklistCache archive) and <b>MTGTop8</b> (local events worldwide). The archive currently holds <b>${n0(M.totals.decks)} lists</b> from <b>${n0(M.totals.tournaments)} tournaments</b>.</p>
+      <p>Every 12 hours we collect tournaments from the original sources wherever we can:</p>
+      <ul>
+        <li><b>mtgo.com</b> — every MTGO Challenge, League and Showcase, read directly from the official Wizards site.</li>
+        <li><b>magic.gg</b> — Wizards' premier events: Pro Tours, World Championship, Arena Championships, Regional Championships, Spotlight Series. Read directly.</li>
+        <li><b><a href="https://topdeck.gg" target="_blank" rel="noopener">TopDeck.gg</a></b> — paper and webcam events (cEDH, Duel Commander, Legacy, Pauper…) through its official public API. Data provided by TopDeck.gg.</li>
+        <li><b>Melee.gg</b>, <b>CardsRealm</b>, <b>GetPaird</b> — through the public MTGODecklistCache archive (Melee does not allow automated access to its site, so we use the archive's copy, updated weekly).</li>
+        <li><b>MTGTop8</b> — local events worldwide.</li>
+      </ul>
+      <p> The archive currently holds <b>${n0(M.totals.decks)} lists</b> from <b>${n0(M.totals.tournaments)} tournaments</b>.</p>
       <h2>What we check — and reject</h2>
       <p>No source is trusted blindly. Every tournament and every list goes through these checks; everything we reject is listed, with the reason, in <a href="data/export/excluded.csv">excluded data.csv</a>.</p>
       <table><tr><th>Check</th><th>Rejected</th></tr>${qRows.map(([k, v]) => `<tr><td>${esc(k.charAt(0).toUpperCase() + k.slice(1))}</td><td>${n0(v)}</td></tr>`).join("")}</table>
-      <p><b>Duplicate tournaments</b> are a real problem: MTGO reuses page addresses, so the same event can be published twice under two dates. We merge two events when at least 80% of their lists (same player, same 75 cards) coincide, they are the same kind of event with similar names, and we keep the most authoritative source.</p>
+      <p><b>Duplicate tournaments</b> are a real problem: MTGO reuses page addresses, so the same event can be published twice under two dates. We merge two events when at least 80% of their lists (same player, same 75 cards) coincide, they are the same kind of event with similar names, and we keep the best copy: first the one with placements (magic.gg publishes Worlds alphabetically, Melee with the final standings), then the one read directly from the organiser. When player names are written differently (“Rosdahl, Alexander”), eight or more identical 75s at the same event within three days are enough proof.</p>
+      <p><b>Placements are never guessed.</b> magic.gg often publishes “top 32” pages without saying who finished where: those lists get “Top 32” and the points of 32nd place (the minimum they certainly earned). We write exact placements only when the page states the lists are in final standing order.</p>
       <p><b>Invalid lists</b>: main deck under 60 or over 90 cards, sideboard over 15, more than 4 copies of a non-basic card (singleton formats: 1), wrong Commander deck size. Card names are cleaned of set codes and collector numbers, and matched to Scryfall.</p>
       <p><b>Small events</b>: tournaments with fewer than <b>${M.min_players || 16} players</b> are left out when the number of players is known.</p>
       <h2>Event size</h2>

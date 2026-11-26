@@ -9,7 +9,7 @@ import argparse
 import time
 
 from . import archetypes, build, store
-from .sources import decklistcache, mtgo, mtgtop8
+from .sources import decklistcache, magicgg, mtgo, mtgtop8, topdeck
 
 
 def cmd_update(a) -> None:
@@ -21,7 +21,16 @@ def cmd_update(a) -> None:
             n = mtgo.fetch(state, days=max(a.days, a.mtgo_days), max_pages=a.mtgo_pages)
             print(f"[update] mtgo.com (diretto): {n} tornei")
             store.save_state(state)
-        # 2) archivio MTGODecklistCache (Melee, Topdeck, CardsRealm, GetPaird e storico MTGO)
+        # 2) magic.gg: eventi premier ufficiali (Pro Tour, Mondiali, Arena Championship, Regional)
+        if not a.no_magicgg:
+            n = magicgg.fetch(state)
+            print(f"[update] magic.gg (diretto): {n} eventi")
+            store.save_state(state)
+        # 3) TopDeck.gg: API ufficiale (si attiva solo con il secret TOPDECK_API_KEY)
+        n = topdeck.fetch(state, days=max(a.days, a.topdeck_days))
+        print(f"[update] topdeck.gg (diretto): {n} tornei")
+        store.save_state(state)
+        # 4) archivio MTGODecklistCache (Melee, Topdeck, CardsRealm, GetPaird e storico MTGO)
         n = decklistcache.fetch(a.days, state)
         print(f"[update] MTGODecklistCache: {n} tornei aggiornati")
         store.save_state(state)
@@ -45,6 +54,8 @@ def main() -> None:
         s.add_argument("--no-mtgtop8", action="store_true")
         s.add_argument("--no-mtgo", action="store_true", help="salta la lettura diretta di mtgo.com")
         s.add_argument("--mtgo-days", type=int, default=4, help="giorni indietro per mtgo.com")
+        s.add_argument("--no-magicgg", action="store_true", help="salta magic.gg")
+        s.add_argument("--topdeck-days", type=int, default=4, help="giorni indietro per TopDeck.gg (90 per il recupero)")
         s.add_argument("--mtgo-pages", type=int, default=600, help="tetto pagine evento mtgo.com per esecuzione (~1 s l'una)")
     for name in ("build", "all"):
         s = sub.choices[name] if name in sub.choices else sub.add_parser(name)

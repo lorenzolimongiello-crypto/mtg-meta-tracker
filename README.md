@@ -10,8 +10,10 @@ Si aggiorna da solo **ogni 12 ore** con GitHub Actions ed è pubblicato gratis s
 
 | Fonte | Cosa copre | Come |
 |---|---|---|
-| mtgo.com | Challenge, League 5-0, Showcase (online) | tramite [MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache) |
-| Melee.gg, Topdeck.gg, CardsRealm, GetPaird | RCQ, Regional, grandi eventi cartacei | tramite MTGODecklistCache |
+| mtgo.com | Challenge, League 5-0, Showcase (online) | **diretto** dal sito ufficiale (JSON nella pagina): iscritti, classifica finale, id unico |
+| magic.gg | Pro Tour, Mondiali, Arena Championship, Regional Championship, Spotlight | **diretto**; piazzamenti solo se la pagina dichiara l'ordine, altrimenti "Top N" |
+| TopDeck.gg | eventi cartacei e webcam (cEDH, Duel Commander, Legacy, Pauper...) | **API ufficiale**: serve il secret `TOPDECK_API_KEY` (gratis); credito obbligatorio nel sito |
+| Melee.gg, CardsRealm, GetPaird | RCQ, Regional, grandi eventi cartacei | tramite [MTGODecklistCache](https://github.com/Jiliac/MTGODecklistCache) (settimanale). Melee vieta robot e scraper nei termini, la sua API è solo per gli organizzatori |
 | MTGTop8 | tornei cartacei locali (molti italiani ed europei) | scraper proprio, 1 richiesta ogni 5 s come da robots.txt |
 
 - Gli eventi MTGO presenti anche su MTGTop8 vengono saltati.
@@ -45,7 +47,11 @@ finisce in `data/export/excluded.csv`, con il motivo:
 
 ```
 mtgmeta/
+  sources/mtgo.py            mtgo.com diretto
+  sources/magicgg.py         magic.gg diretto (eventi premier)
+  sources/topdeck.py         TopDeck.gg, API ufficiale (con TOPDECK_API_KEY)
   sources/decklistcache.py   raccolta da MTGODecklistCache (API GitHub + raw, incrementale)
+  quality.py                 controlli di qualità e unione dei duplicati
   sources/mtgtop8.py         scraper MTGTop8
   archetypes.py              classificatore (regole, varianti, fallback, colori)
   build.py                   SQLite + CSV + JSON per il sito
@@ -80,7 +86,8 @@ python -m http.server 8000 -d site         # apri http://localhost:8000
 ```
 
 Opzioni utili:
-- `--no-mtgtop8` salta MTGTop8.
+- `--no-mtgtop8` salta MTGTop8; `--no-mtgo` salta mtgo.com; `--no-magicgg` salta magic.gg.
+- `--mtgo-days 90` / `--topdeck-days 90` per il recupero iniziale delle fonti dirette.
 - `--mtgtop8-requests 50` limita il tempo speso su MTGTop8.
 - `--site-days 90` imposta quanti giorni di liste vengono caricati nel sito.
 

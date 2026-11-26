@@ -491,6 +491,8 @@ button { font: inherit; color: inherit; }
 .prose h2 { font: 500 26px/1.2 var(--serif); color: var(--ink); margin: 44px 0 10px; }
 .prose b { color: var(--ink); }
 .prose a { color: var(--accent); }
+.prose ul { margin: 10px 0 14px; padding-left: 20px; display: grid; gap: 6px; }
+.prose li::marker { color: var(--accent); }
 .prose table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 14px 0; display: block; overflow-x: auto; }
 .prose td, .prose th { border-bottom: 1px solid var(--hair); padding: 8px 10px; text-align: left; vertical-align: top; }
 .prose code { font-size: 13px; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
