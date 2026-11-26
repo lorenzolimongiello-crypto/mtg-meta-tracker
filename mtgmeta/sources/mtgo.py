@@ -101,7 +101,9 @@ def _months(since: dt.date, until: dt.date):
         y, m = (y + 1, 1) if m == 12 else (y, m + 1)
 
 
-def fetch(state: dict, days: int = 3, max_pages: int = 600) -> int:
+def fetch(state: dict, days: int = 3, max_pages: int = 600, max_minutes: float = 75) -> int:
+    """Stops after max_minutes so the run always ends in time to save what it collected."""
+    deadline = time.time() + max_minutes * 60
     seen: dict = state.setdefault("mtgo_direct", {})  # slug -> "event id" | "empty:<date>"
     today = dt.date.today()
     since = today - dt.timedelta(days=days)
@@ -133,6 +135,9 @@ def fetch(state: dict, days: int = 3, max_pages: int = 600) -> int:
     for s in todo:
         if budget <= 0:
             print("[mtgo] page budget reached, the rest next run")
+            break
+        if time.time() > deadline:
+            print(f"[mtgo] time budget ({max_minutes:.0f} min) reached, the rest next run")
             break
         budget -= 1
         try:

@@ -18,7 +18,7 @@ def cmd_update(a) -> None:
     try:
         # 1) fonte ufficiale MTGO letta direttamente (prioritaria sui duplicati dell'archivio)
         if not a.no_mtgo:
-            n = mtgo.fetch(state, days=max(a.days, a.mtgo_days), max_pages=a.mtgo_pages)
+            n = mtgo.fetch(state, days=max(a.days, a.mtgo_days), max_pages=a.mtgo_pages, max_minutes=a.mtgo_minutes)
             print(f"[update] mtgo.com (diretto): {n} tornei")
             store.save_state(state)
         # 2) magic.gg: eventi premier ufficiali (Pro Tour, Mondiali, Arena Championship, Regional)
@@ -54,6 +54,7 @@ def main() -> None:
         s.add_argument("--no-mtgtop8", action="store_true")
         s.add_argument("--no-mtgo", action="store_true", help="salta la lettura diretta di mtgo.com")
         s.add_argument("--mtgo-days", type=int, default=4, help="giorni indietro per mtgo.com")
+        s.add_argument("--mtgo-minutes", type=float, default=75, help="tempo massimo su mtgo.com per esecuzione")
         s.add_argument("--no-magicgg", action="store_true", help="salta magic.gg")
         s.add_argument("--topdeck-days", type=int, default=4, help="giorni indietro per TopDeck.gg (90 per il recupero)")
         s.add_argument("--mtgo-pages", type=int, default=600, help="tetto pagine evento mtgo.com per esecuzione (~1 s l'una)")
