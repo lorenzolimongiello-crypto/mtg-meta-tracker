@@ -154,7 +154,7 @@ def build(site_days: int = 90) -> None:
     t_rows, d_rows, dc_rows = [], [], []
 
     for t in tournaments:
-        prof = classify_event(t["source"], t["name"], t.get("players"), len(t["decks"]))
+        prof = classify_event(t["source"], t["name"], t.get("players"), len(t["decks"]), t.get("players_official", False))
         # 4) soglia minima di partecipanti (solo quando il numero è noto)
         if prof["players_known"] and prof["players"] and prof["players"] < MIN_PLAYERS:
             exclude("tournament", f"fewer than {MIN_PLAYERS} players", t)

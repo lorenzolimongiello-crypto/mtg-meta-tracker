@@ -11,6 +11,12 @@ on:
       mtgtop8_requests:
         description: "Tetto richieste MTGTop8 (5 s l'una)"
         default: "200"
+      mtgo_days:
+        description: "Giorni indietro da leggere su mtgo.com (90 per il recupero completo)"
+        default: "4"
+      mtgo_pages:
+        description: "Tetto pagine evento mtgo.com per esecuzione"
+        default: "600"
 
 permissions:
   contents: write
@@ -24,7 +30,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
 
@@ -39,6 +45,8 @@ jobs:
           python -m mtgmeta update
           --days ${{ inputs.days || '3' }}
           --mtgtop8-requests ${{ inputs.mtgtop8_requests || '200' }}
+          --mtgo-days ${{ inputs.mtgo_days || '4' }}
+          --mtgo-pages ${{ inputs.mtgo_pages || '600' }}
 
       - name: Classifica e genera il sito
         run: python -m mtgmeta build --site-days 90

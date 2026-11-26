@@ -132,13 +132,14 @@ def merge_duplicate_tournaments(tournaments: list[dict], sig_of) -> tuple[list[d
                 # even when the same players used the same 75 in both
                 if _kind(t) != _kind(u) or not _similar_names(t["name"], u["name"]):
                     continue
-                if len(sigs[id(small)]) == len(sigs[id(big)]):
-                    # same size: keep the most authoritative source, then the one whose id carries its date
-                    def rank(x):
-                        own = x["date"] in x["id"] or x["date"].replace("-", "") in x["id"]
-                        return (SOURCE_PRIORITY.get(x["source"], 5), not own)
-                    if rank(small) < rank(big):
-                        small, big = big, small
+                def rank(x):
+                    # read directly from the organiser's site first, then the most authoritative source,
+                    # then the copy whose id carries its own date
+                    own = x["date"] in x["id"] or x["date"].replace("-", "") in x["id"]
+                    return (x.get("via") != "direct", SOURCE_PRIORITY.get(x["source"], 5), not own)
+                direct_pair = (small.get("via") == "direct") != (big.get("via") == "direct")
+                if (direct_pair or len(sigs[id(small)]) == len(sigs[id(big)])) and rank(small) < rank(big):
+                    small, big = big, small
                 dropped.add(id(small))
                 log.append((small["id"], big["id"], len(sigs[id(small)])))
                 if small is t:

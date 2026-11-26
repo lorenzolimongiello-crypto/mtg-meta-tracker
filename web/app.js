@@ -491,7 +491,8 @@ function renderEvent(idx, opts) {
       <div class="eyebrow">${dLong(ev.date)} · ${ev.type} · ${TIER_L[ev.tier].toLowerCase()}${ev.tier === "league" ? "" : " event"}</div>
       <h1 class="display sm">${esc(ev.name)}</h1>
       <p class="lede">${sizeBadge(ev)} · ${plural(list.length, "list")} published${ev.url ? ` · <a class="link-more" href="${esc(ev.url)}" target="_blank" rel="noopener">original page ↗</a>` : ""}</p>
-      ${ev.kind === "challenge" ? `<p class="note">MTGO only publishes the top 32 of a Challenge, so the real number of players is not known.</p>` : ""}
+      ${ev.kind === "challenge" && !ev.players ? `<p class="note">For this Challenge we only have the top 32 lists, so the real number of players is not known.</p>` : ""}
+      ${ev.kind === "challenge" && ev.players ? `<p class="note">Read directly from mtgo.com: official player count and final standings.</p>` : ""}
       ${ev.tier === "league" ? `<p class="note">MTGO Leagues have no standings: Wizards publishes a selection of 5-0 lists.</p>` : ""}
     </header>
     ${meta.length > 1 ? `<div class="chiplist">${meta.map((a) => `<a href="${archLink(a.arch)}">${pips(a.color)} ${esc(a.arch)}<span>${a.n}</span></a>`).join("")}</div>` : ""}
@@ -849,7 +850,7 @@ function renderAbout() {
       <p class="lede">One good data point is worth more than many. Here is where every number comes from, what we throw away, and why.</p></header>
     <article class="prose">
       <h2>Where the lists come from</h2>
-      <p>Every 12 hours we collect tournaments published by <b>MTGO</b> (Challenges, Leagues, Showcases), <b>Melee.gg</b>, <b>Topdeck.gg</b>, <b>CardsRealm</b>, <b>GetPaird</b> (through the public MTGODecklistCache archive) and <b>MTGTop8</b> (local events worldwide). The archive currently holds <b>${n0(M.totals.decks)} lists</b> from <b>${n0(M.totals.tournaments)} tournaments</b>.</p>
+      <p>Every 12 hours we collect tournaments published by <b>MTGO</b> (Challenges, Leagues, Showcases — read directly from mtgo.com), <b>Melee.gg</b>, <b>Topdeck.gg</b>, <b>CardsRealm</b>, <b>GetPaird</b> (through the public MTGODecklistCache archive) and <b>MTGTop8</b> (local events worldwide). The archive currently holds <b>${n0(M.totals.decks)} lists</b> from <b>${n0(M.totals.tournaments)} tournaments</b>.</p>
       <h2>What we check — and reject</h2>
       <p>No source is trusted blindly. Every tournament and every list goes through these checks; everything we reject is listed, with the reason, in <a href="data/export/excluded.csv">excluded data.csv</a>.</p>
       <table><tr><th>Check</th><th>Rejected</th></tr>${qRows.map(([k, v]) => `<tr><td>${esc(k.charAt(0).toUpperCase() + k.slice(1))}</td><td>${n0(v)}</td></tr>`).join("")}</table>
@@ -862,7 +863,7 @@ function renderAbout() {
         <tr><td><span class="tier">${tierDot("medium")}<b>Medium</b></span></td><td>32–99 players, or MTGO Challenges and qualifiers whose size we don't know</td></tr>
         <tr><td><span class="tier">${tierDot("small")}<b>Small</b></span></td><td>16–31 players</td></tr>
         <tr><td><span class="tier">${tierDot("league")}<b>MTGO League</b></span></td><td>a selection of 5-0 lists published by Wizards, no standings (can be switched off in the filters)</td></tr></table>
-      <p><b>MTGO Challenges</b>: the official site only publishes the top 32, so the real number of players is unknown. We treat them as medium events.</p>
+      <p><b>MTGO events are read directly from mtgo.com</b>, the official Wizards of the Coast site: we take the official player count, the final standings after the playoffs and each event's unique id (so the same event can never be counted twice). This also fixes real errors in third-party archives — in one Pauper Challenge, every placement was wrong there. For older Challenges collected before this change, the player count is unknown and we treat them as medium events.</p>
       <h2>Points and the results index</h2>
       <p>Each list earns points measuring <b>how rare its result is</b>: <code>points = log₂(players ÷ placement)</code>. Every point is a doubling of difficulty:</p>
       <table><tr><th>Result</th><th>Points</th></tr>

@@ -29,21 +29,23 @@ _PREMIER = re.compile(
 _QUALIFIER = re.compile(r"\brcq\b|qualifier|\bptq\b|\bwmcq\b|trial|preliminary|\brecq\b", re.I)
 
 
-def classify_event(source: str, name: str, players: int | None, n_decks: int) -> dict:
+def classify_event(source: str, name: str, players: int | None, n_decks: int, official: bool = False) -> dict:
+    """official=True: the player count comes from the organiser's own data (e.g. mtgo.com player_count)."""
     low = name.lower()
     mtgo = source.startswith("mtgo")
     if mtgo and "league" in low:
         return {"kind": "league", "tier": "league", "players": None, "players_known": False}
 
+    # MTGO: the published standings stop at the top 32, so the count is only trusted when official
     if mtgo and "challenge" in low and "showcase" not in low:
         kind = "challenge"
-        players_known = False  # MTGO pubblica solo la top 32
+        players_known = official and players is not None
     elif _PREMIER.search(low):
         kind = "premier"
-        players_known = players is not None and not mtgo
+        players_known = players is not None and (official or not mtgo)
     elif _QUALIFIER.search(low):
         kind = "qualifier"
-        players_known = players is not None and not mtgo
+        players_known = players is not None and (official or not mtgo)
     else:
         kind = "local"
         players_known = players is not None
