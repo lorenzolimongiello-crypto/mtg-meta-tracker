@@ -19302,6 +19302,19 @@
 "type_line": "Creature — Wall",
 "uri": "https://scryfall.com/card/mir/159/blistering-barrier"
 },
+"blistering firecat": {
+"art": "front/e/0/e0ddcf4a-1943-49dd-a02c-75804ce4bc3e.jpg?1783945058",
+"artist": "Arnie Swekel",
+"cmc": 4.0,
+"colors": "R",
+"img": "front/e/0/e0ddcf4a-1943-49dd-a02c-75804ce4bc3e.jpg?1783945058",
+"mana": "{1}{R}{R}{R}",
+"name": "Blistering Firecat",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Elemental Cat",
+"uri": "https://scryfall.com/card/ons/189/blistering-firecat"
+},
 "blisterpod": {
 "art": "front/e/1/e16f1803-634a-41b0-ae21-484d6f914a0d.jpg?1783938190",
 "artist": "Ryan Barger",
@@ -19574,6 +19587,19 @@
 "type": "Enchantment",
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/2xm/118/blood-moon"
+},
+"blood oath": {
+"art": "front/f/1/f1556a12-ff45-4a12-988a-63615b3799a9.jpg?1783945941",
+"artist": "Mike Ploog",
+"cmc": 4.0,
+"colors": "R",
+"img": "front/f/1/f1556a12-ff45-4a12-988a-63615b3799a9.jpg?1783945941",
+"mana": "{3}{R}",
+"name": "Blood Oath",
+"rarity": "rare",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/mmq/177/blood-oath"
 },
 "blood pact": {
 "art": "front/e/e/ee769671-655b-40d6-a6d8-bf8c901df17f.jpg?1783909642",
@@ -21576,6 +21602,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/c19/107/boneyard-parley"
+},
+"bonfire of the damned": {
+"art": "front/c/f/cf4f47a9-1c23-4d63-bb89-83c889615e50.jpg?1783936648",
+"artist": "James Paick",
+"cmc": 1.0,
+"colors": "R",
+"img": "front/c/f/cf4f47a9-1c23-4d63-bb89-83c889615e50.jpg?1783936648",
+"mana": "{X}{X}{R}",
+"name": "Bonfire of the Damned",
+"rarity": "mythic",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/mm3/91/bonfire-of-the-damned"
 },
 "bonny pall, clearcutter": {
 "art": "front/4/3/4383ae7c-58ea-4354-93e4-677ad185c3bb.jpg?1783911798",
@@ -39386,6 +39425,19 @@
 "type": "Creature",
 "type_line": "Creature — Vampire",
 "uri": "https://scryfall.com/card/lcc/267/cruel-celebrant"
+},
+"cruel edict": {
+"art": "front/5/4/54151d43-2e22-4e6c-a6fe-327959382dd1.jpg?1783938778",
+"artist": "Michael Sutfin",
+"cmc": 2.0,
+"colors": "B",
+"img": "front/5/4/54151d43-2e22-4e6c-a6fe-327959382dd1.jpg?1783938778",
+"mana": "{1}{B}",
+"name": "Cruel Edict",
+"rarity": "uncommon",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/dvd/48/cruel-edict"
 },
 "cruel entertainment": {
 "art": "front/3/e/3e304424-4a50-43bb-aee0-e9f960583aac.jpg?1783937089",
@@ -63697,6 +63749,19 @@
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/s99/16/false-peace"
 },
+"false prophet": {
+"art": "front/f/4/f41a43ba-1867-4ce3-97fe-5ae67d3f36c3.jpg?1783941254",
+"artist": "Eric Peterson",
+"cmc": 4.0,
+"colors": "W",
+"img": "front/f/4/f41a43ba-1867-4ce3-97fe-5ae67d3f36c3.jpg?1783941254",
+"mana": "{2}{W}{W}",
+"name": "False Prophet",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Human Cleric",
+"uri": "https://scryfall.com/card/cmd/13/false-prophet"
+},
 "false summoning": {
 "art": "front/b/4/b4b4aff4-c04b-4801-920a-b3ad1998b2cd.jpg?1783941452",
 "artist": "DiTerlizzi",
@@ -81780,6 +81845,19 @@
 "type_line": "Creature — Zombie Bard",
 "uri": "https://scryfall.com/card/fra/136/grim-repriser"
 },
+"grim return": {
+"art": "front/1/5/15b69f74-3b54-4db4-abf3-b71db8cc9562.jpg?1783939923",
+"artist": "Seb McKinnon",
+"cmc": 3.0,
+"colors": "B",
+"img": "front/1/5/15b69f74-3b54-4db4-abf3-b71db8cc9562.jpg?1783939923",
+"mana": "{2}{B}",
+"name": "Grim Return",
+"rarity": "rare",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/m14/100/grim-return"
+},
 "grim servant": {
 "art": "front/d/f/df9c275d-e8cc-40c2-8baf-7a0d154aa7cf.jpg?1783911279",
 "artist": "David Astruga",
@@ -85627,6 +85705,19 @@
 "type": "Creature",
 "type_line": "Legendary Creature — Human Archer Hero",
 "uri": "https://scryfall.com/card/msh/131/hawkeye-young-avenger"
+},
+"haystack": {
+"art": "front/4/6/46e791f0-297b-46bf-acd5-f62458009d76.jpg?1783910987",
+"artist": "Xabi Gaztelua",
+"cmc": 2.0,
+"colors": "W",
+"img": "front/4/6/46e791f0-297b-46bf-acd5-f62458009d76.jpg?1783910987",
+"mana": "{1}{W}",
+"name": "Haystack",
+"rarity": "uncommon",
+"type": "Artifact",
+"type_line": "Artifact",
+"uri": "https://scryfall.com/card/acr/5/haystack"
 },
 "haytham kenway": {
 "art": "front/7/3/73468f53-7de5-4a64-8f83-c0376f1d1f3f.jpg?1783910971",
@@ -174867,6 +174958,19 @@
 "type_line": "Artifact",
 "uri": "https://scryfall.com/card/fdn/679/sorcerous-spyglass"
 },
+"sorcerous squall": {
+"art": "front/c/0/c06274ff-892e-418b-8ba5-4d3b3231e327.jpg?1783914197",
+"artist": "Matt Stewart",
+"cmc": 9.0,
+"colors": "U",
+"img": "front/c/0/c06274ff-892e-418b-8ba5-4d3b3231e327.jpg?1783914197",
+"mana": "{6}{U}{U}{U}",
+"name": "Sorcerous Squall",
+"rarity": "rare",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/ltc/504/sorcerous-squall"
+},
 "sorin markov": {
 "art": "front/e/2/e25b3a89-3a99-4e02-bf0c-a3cf450da1a1.jpg?1783941077",
 "artist": "Michael Komarck",
@@ -176697,6 +176801,19 @@
 "type": "Creature",
 "type_line": "Creature — Spirit",
 "uri": "https://scryfall.com/card/inr/248/spell-queller"
+},
+"spell rupture": {
+"art": "front/7/2/7267fcec-0879-4743-a45f-35057ccb2596.jpg?1783940134",
+"artist": "Kev Walker",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/7/2/7267fcec-0879-4743-a45f-35057ccb2596.jpg?1783940134",
+"mana": "{1}{U}",
+"name": "Spell Rupture",
+"rarity": "common",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/gtc/52/spell-rupture"
 },
 "spell satchel": {
 "art": "front/7/d/7de826a0-6e68-4d40-a51c-8d6e7a4148d1.jpg?1783927279",
@@ -183275,6 +183392,19 @@
 "type": "Land",
 "type_line": "Land",
 "uri": "https://scryfall.com/card/msh/273/subterranean-cavern"
+},
+"subterranean hangar": {
+"art": "front/e/d/edc199d1-970b-489f-b713-8285151f16ae.jpg?1783945904",
+"artist": "Matt Cavotta",
+"cmc": 0,
+"colors": "B",
+"img": "front/e/d/edc199d1-970b-489f-b713-8285151f16ae.jpg?1783945904",
+"mana": "",
+"name": "Subterranean Hangar",
+"rarity": "uncommon",
+"type": "Land",
+"type_line": "Land",
+"uri": "https://scryfall.com/card/mmq/329/subterranean-hangar"
 },
 "subterranean schooner": {
 "art": "front/9/4/94b6881a-b00e-4e90-92e6-602ed8e0e090.jpg?1783913787",
@@ -201618,6 +201748,19 @@
 "type": "Artifact",
 "type_line": "Artifact",
 "uri": "https://scryfall.com/card/cmm/981/transmogrifying-wand"
+},
+"transmutation": {
+"art": "front/e/2/e2d90519-68f8-43ab-902a-0fed0f526488.jpg?1783947367",
+"artist": "Susan Van Camp",
+"cmc": 2.0,
+"colors": "B",
+"img": "front/e/2/e2d90519-68f8-43ab-902a-0fed0f526488.jpg?1783947367",
+"mana": "{1}{B}",
+"name": "Transmutation",
+"rarity": "common",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/chr/40/transmutation"
 },
 "transmutation font": {
 "art": "front/e/6/e6cfe673-d688-499a-882b-4fe5418739e3.jpg?1783911996",
@@ -220482,6 +220625,19 @@
 "type_line": "Legendary Creature — Goblin Shaman",
 "uri": "https://scryfall.com/card/c20/234/wort-the-raidmother"
 },
+"worthy cause": {
+"art": "front/1/f/1f610d8b-1782-43a4-bfb3-40887bdedba0.jpg?1783946658",
+"artist": "John Matson",
+"cmc": 1.0,
+"colors": "W",
+"img": "front/1/f/1f610d8b-1782-43a4-bfb3-40887bdedba0.jpg?1783946658",
+"mana": "{W}",
+"name": "Worthy Cause",
+"rarity": "uncommon",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/tmp/53/worthy-cause"
+},
 "worthy cost": {
 "art": "front/a/d/adc18edc-01d8-4a7e-a87b-a854e50aa75e.jpg?1783907367",
 "artist": "Andrew Mar",
@@ -220819,6 +220975,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/con/56/wretched-banquet"
+},
+"wretched confluence": {
+"art": "front/2/0/20203edb-1363-4ed3-8c5b-b1d96ff2b7c0.jpg?1783915661",
+"artist": "Kieran Yanner",
+"cmc": 5.0,
+"colors": "B",
+"img": "front/2/0/20203edb-1363-4ed3-8c5b-b1d96ff2b7c0.jpg?1783915661",
+"mana": "{3}{B}{B}",
+"name": "Wretched Confluence",
+"rarity": "rare",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/cmm/200/wretched-confluence"
 },
 "wretched gryff": {
 "art": "front/7/2/722b519a-715d-4393-9d3c-97f329896ef4.jpg?1783908187",
