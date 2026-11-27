@@ -32016,6 +32016,19 @@
 "type_line": "Creature — Beast Horror Spirit",
 "uri": "https://scryfall.com/card/lci/97/chupacabra-echo"
 },
+"churning eddy": {
+"art": "front/b/d/bd28bc8e-842f-4788-92a0-3019e3c2385f.jpg?1783945164",
+"artist": "Thomas M. Baxa",
+"cmc": 4.0,
+"colors": "U",
+"img": "front/b/d/bd28bc8e-842f-4788-92a0-3019e3c2385f.jpg?1783945164",
+"mana": "{3}{U}",
+"name": "Churning Eddy",
+"rarity": "common",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/tor/32/churning-eddy"
+},
 "cid, freeflier pilot": {
 "art": "front/a/f/afa9e3e6-a633-46ad-b52a-48574b2f3d07.jpg?1783906369",
 "artist": "Billy Christian",
@@ -49708,6 +49721,19 @@
 "type": "Creature",
 "type_line": "Enchantment Creature — Human Citizen",
 "uri": "https://scryfall.com/card/neo/93/dockside-chef"
+},
+"dockside extortionist": {
+"art": "front/9/e/9e2e3efb-75cb-430f-b9f4-cb58f3aeb91b.jpg?1783921889",
+"artist": "Lie Setiawan",
+"cmc": 2.0,
+"colors": "R",
+"img": "front/9/e/9e2e3efb-75cb-430f-b9f4-cb58f3aeb91b.jpg?1783921889",
+"mana": "{1}{R}",
+"name": "Dockside Extortionist",
+"rarity": "mythic",
+"type": "Creature",
+"type_line": "Creature — Goblin Pirate",
+"uri": "https://scryfall.com/card/2x2/107/dockside-extortionist"
 },
 "dockworker drone": {
 "art": "front/e/e/eeff069f-427b-42ad-afb1-36f0e547fb74.jpg?1783905998",
@@ -96587,6 +96613,19 @@
 "type_line": "Legendary Artifact Creature — Spider Hero",
 "uri": "https://scryfall.com/card/spm/166/iron-spider-stark-upgrade"
 },
+"iron star": {
+"art": "front/e/c/ec6d1e6b-80af-4eb1-be3c-62ab74315777.jpg?1783944633",
+"artist": "Donato Giancola",
+"cmc": 1.0,
+"colors": "",
+"img": "front/e/c/ec6d1e6b-80af-4eb1-be3c-62ab74315777.jpg?1783944633",
+"mana": "{1}",
+"name": "Iron Star",
+"rarity": "uncommon",
+"type": "Artifact",
+"type_line": "Artifact",
+"uri": "https://scryfall.com/card/8ed/304/iron-star"
+},
 "iron suitcase": {
 "art": "front/0/1/018d8d89-c90e-4245-93d3-6f8af4c95f81.jpg?1783903028",
 "artist": "Kevin Glint",
@@ -112288,6 +112327,19 @@
 "type": "Enchantment",
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/jmp/410/lurking-predators"
+},
+"lurking skirge": {
+"art": "front/9/0/9063cc12-a822-4488-856e-93d70ecfe37f.jpg?1783946241",
+"artist": "Daren Bader",
+"cmc": 2.0,
+"colors": "B",
+"img": "front/9/0/9063cc12-a822-4488-856e-93d70ecfe37f.jpg?1783946241",
+"mana": "{1}{B}",
+"name": "Lurking Skirge",
+"rarity": "rare",
+"type": "Enchantment",
+"type_line": "Enchantment",
+"uri": "https://scryfall.com/card/ulg/55/lurking-skirge"
 },
 "lurrus of the dream-den": {
 "art": "front/5/a/5ad36fb2-c44e-4085-ba0d-54277841ad3a.jpg?1783931010",
@@ -167366,6 +167418,19 @@
 "type_line": "Instant",
 "uri": "https://scryfall.com/card/m20/193/shared-summons"
 },
+"shared triumph": {
+"art": "front/0/d/0d07ebe6-76cf-4345-b59b-9954496c44d0.jpg?1783945091",
+"artist": "Mark Brill",
+"cmc": 2.0,
+"colors": "W",
+"img": "front/0/d/0d07ebe6-76cf-4345-b59b-9954496c44d0.jpg?1783945091",
+"mana": "{1}{W}",
+"name": "Shared Triumph",
+"rarity": "rare",
+"type": "Enchantment",
+"type_line": "Enchantment",
+"uri": "https://scryfall.com/card/ons/53/shared-triumph"
+},
 "shark shredder, killer clone": {
 "art": "front/8/f/8f946b3d-7d2a-4210-a909-d16078757e3b.jpg?1783904104",
 "artist": "Nicholas Gregory",
@@ -210263,6 +210328,19 @@
 "type": "Creature",
 "type_line": "Creature — Dinosaur Avatar",
 "uri": "https://scryfall.com/card/lcc/262/verdant-suns-avatar"
+},
+"verdeloth the ancient": {
+"art": "front/4/b/4b3e632e-21dc-4cc3-9c80-4b3d8b8e5795.jpg?1783908612",
+"artist": "Daren Bader",
+"cmc": 6.0,
+"colors": "G",
+"img": "front/4/b/4b3e632e-21dc-4cc3-9c80-4b3d8b8e5795.jpg?1783908612",
+"mana": "{4}{G}{G}",
+"name": "Verdeloth the Ancient",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Legendary Creature — Treefolk",
+"uri": "https://scryfall.com/card/j25/737/verdeloth-the-ancient"
 },
 "verduran enchantress": {
 "art": "front/7/2/722a73a1-9497-4d8d-850c-ec6c6ab1b8d3.jpg?1783915420",
