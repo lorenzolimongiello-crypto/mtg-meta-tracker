@@ -15987,6 +15987,19 @@
 "type_line": "Instant",
 "uri": "https://scryfall.com/card/uma/211/beckon-apparition"
 },
+"become anonymous": {
+"art": "front/f/3/f321777f-399b-4f80-9baf-da6a0aaa325a.jpg?1783910985",
+"artist": "Alice Xia Zhang",
+"cmc": 4.0,
+"colors": "U",
+"img": "front/f/3/f321777f-399b-4f80-9baf-da6a0aaa325a.jpg?1783910985",
+"mana": "{2}{U}{U}",
+"name": "Become Anonymous",
+"rarity": "uncommon",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/acr/14/become-anonymous"
+},
 "become brutes": {
 "art": "front/a/1/a154dadc-be5b-4ad6-9946-bdc54c251bff.jpg?1783915039",
 "artist": "Julia Griffin",
@@ -41077,6 +41090,19 @@
 "type_line": "Artifact",
 "uri": "https://scryfall.com/card/mh2/295/cursed-totem"
 },
+"cursed windbreaker": {
+"art": "front/f/6/f651e216-f9da-4696-8a1d-6d674e9044c0.jpg?1783909499",
+"artist": "Nino Vecia",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/f/6/f651e216-f9da-4696-8a1d-6d674e9044c0.jpg?1783909499",
+"mana": "{2}{U}",
+"name": "Cursed Windbreaker",
+"rarity": "uncommon",
+"type": "Artifact",
+"type_line": "Artifact — Equipment",
+"uri": "https://scryfall.com/card/dsk/47/cursed-windbreaker"
+},
 "cursed wombat": {
 "art": "front/a/0/a09a8de1-98b3-49e0-82f6-d90f1048de44.jpg?1783911252",
 "artist": "Igor Krstic",
@@ -42376,6 +42402,19 @@
 "type": "Creature",
 "type_line": "Creature — Human Wizard",
 "uri": "https://scryfall.com/card/fin/94/dark-confidant"
+},
+"dark dabbling": {
+"art": "front/f/3/f320791b-a64f-4249-9a78-7b28cfe58743.jpg?1783933826",
+"artist": "Bastien L. Deharme",
+"cmc": 3.0,
+"colors": "B",
+"img": "front/f/3/f320791b-a64f-4249-9a78-7b28cfe58743.jpg?1783933826",
+"mana": "{2}{B}",
+"name": "Dark Dabbling",
+"rarity": "common",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/uma/91/dark-dabbling"
 },
 "dark deal": {
 "art": "front/d/6/d6f0fcd5-232f-4e99-8cfc-ea0fe9c915a6.jpg?1783904806",
@@ -52373,6 +52412,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/bro/92/dreams-of-steel-and-oil"
+},
+"dreamscape artist": {
+"art": "front/f/2/f244985e-7487-44db-bd69-47c781753f2e.jpg?1783927849",
+"artist": "Jim Murray",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/f/2/f244985e-7487-44db-bd69-47c781753f2e.jpg?1783927849",
+"mana": "{1}{U}",
+"name": "Dreamscape Artist",
+"rarity": "common",
+"type": "Creature",
+"type_line": "Creature — Human Spellshaper",
+"uri": "https://scryfall.com/card/tsr/64/dreamscape-artist"
 },
 "dreamshackle geist": {
 "art": "front/1/b/1b81d90b-708a-48c9-a478-e3b0a3d7e982.jpg?1783924894",
@@ -62396,6 +62448,19 @@
 "type": "Creature",
 "type_line": "Creature — Human Rogue",
 "uri": "https://scryfall.com/card/snc/12/extraction-specialist"
+},
+"extraordinary journey": {
+"art": "front/a/6/a69fb480-a9fc-4f09-ac4e-3ce52c485ea9.jpg?1783915121",
+"artist": "Volkan Baǵa",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/a/6/a69fb480-a9fc-4f09-ac4e-3ce52c485ea9.jpg?1783915121",
+"mana": "{X}{X}{U}{U}",
+"name": "Extraordinary Journey",
+"rarity": "rare",
+"type": "Enchantment",
+"type_line": "Enchantment",
+"uri": "https://scryfall.com/card/woe/48/extraordinary-journey"
 },
 "extraplanar lens": {
 "art": "front/f/0/f050a675-c6a2-4d0d-bac6-1d8c51ecf824.jpg?1783915600",
@@ -102501,6 +102566,19 @@
 "type": "Enchantment",
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/mkc/174/killer-service"
+},
+"killer's mask": {
+"art": "front/f/1/f1fc02ae-77b8-4e5e-94b4-22ecf7ae40ae.jpg?1783909479",
+"artist": "Wero Gallo",
+"cmc": 3.0,
+"colors": "B",
+"img": "front/f/1/f1fc02ae-77b8-4e5e-94b4-22ecf7ae40ae.jpg?1783909479",
+"mana": "{2}{B}",
+"name": "Killer's Mask",
+"rarity": "uncommon",
+"type": "Artifact",
+"type_line": "Artifact — Equipment",
+"uri": "https://scryfall.com/card/dsk/104/killers-mask"
 },
 "killian's confidence": {
 "art": "front/5/5/55ff776a-fc3b-4338-8864-d57a85b3f123.jpg?1783903640",
@@ -149025,6 +149103,19 @@
 "type_line": "Legendary Creature — Zombie Wizard",
 "uri": "https://scryfall.com/card/dmu/213/ratadrabik-of-urborg"
 },
+"ratcatcher": {
+"art": "front/e/9/e9cb08a7-cfcf-49ee-948b-4be859c1d256.jpg?1783935161",
+"artist": "Dan Murayama Scott",
+"cmc": 6.0,
+"colors": "B",
+"img": "front/e/9/e9cb08a7-cfcf-49ee-948b-4be859c1d256.jpg?1783935161",
+"mana": "{4}{B}{B}",
+"name": "Ratcatcher",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Ogre Rogue",
+"uri": "https://scryfall.com/card/a25/103/ratcatcher"
+},
 "ratcatcher trainee": {
 "art": "front/7/f/7f4c0959-a107-4d61-9e51-256b2955f6ba.jpg?1783915090",
 "artist": "Michele Giorgi",
@@ -153949,6 +154040,19 @@
 "type": "Enchantment",
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/eld/104/revenge-of-ravens"
+},
+"revenge of the rats": {
+"art": "front/1/f/1f463c55-39a0-4f2f-aae3-0c5540bde5b7.jpg?1783909109",
+"artist": "Filipe Pagliuso",
+"cmc": 4.0,
+"colors": "B",
+"img": "front/1/f/1f463c55-39a0-4f2f-aae3-0c5540bde5b7.jpg?1783909109",
+"mana": "{2}{B}{B}",
+"name": "Revenge of the Rats",
+"rarity": "uncommon",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/fdn/67/revenge-of-the-rats"
 },
 "reverberate": {
 "art": "front/5/9/5996feb4-02ac-45e8-a7f2-966cf74391dc.jpg?1783940482",
@@ -169705,6 +169809,19 @@
 "type": "Creature",
 "type_line": "Legendary Creature — Human Citizen",
 "uri": "https://scryfall.com/card/pip/25/sierra-nukas-biggest-fan"
+},
+"sifa grent": {
+"art": "front/f/8/f8724ac3-45f2-4f4e-91c4-04c8d1c4eed5.jpg?1792741785",
+"artist": "Alex Horley-Orlandelli",
+"cmc": 5.0,
+"colors": "BR",
+"img": "front/f/8/f8724ac3-45f2-4f4e-91c4-04c8d1c4eed5.jpg?1792741785",
+"mana": "{3}{B}{R}",
+"name": "Sifa Grent",
+"rarity": "rare",
+"type": "Planeswalker",
+"type_line": "Legendary Planeswalker — Sifa",
+"uri": "https://scryfall.com/card/mbc/51/sifa-grent"
 },
 "sifter of skulls": {
 "art": "front/b/e/be57a5aa-44f1-483f-9274-aa68f5a2bf1f.jpg?1783937914",
@@ -186239,6 +186356,19 @@
 "type": "Enchantment",
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/c21/130/swarm-intelligence"
+},
+"swarm of rats": {
+"art": "front/b/a/ba1a92e2-6a8f-45fe-84cc-08fde6210077.jpg?1783943981",
+"artist": "Kev Walker",
+"cmc": 2.0,
+"colors": "B",
+"img": "front/b/a/ba1a92e2-6a8f-45fe-84cc-08fde6210077.jpg?1783943981",
+"mana": "{1}{B}",
+"name": "Swarm of Rats",
+"rarity": "uncommon",
+"type": "Creature",
+"type_line": "Creature — Rat",
+"uri": "https://scryfall.com/card/9ed/166/swarm-of-rats"
 },
 "swarm, being of bees": {
 "art": "front/8/a/8a89d8ca-d084-415a-9247-90902f8bb541.jpg?1783903012",
@@ -204310,6 +204440,19 @@
 "type_line": "Artifact Creature — Goblin Archer",
 "uri": "https://scryfall.com/card/neo/168/twinshot-sniper"
 },
+"twist reality": {
+"art": "front/6/4/644714dd-7a0b-4d4b-9a61-8f6e505b1d22.jpg?1783909489",
+"artist": "Allen Williams",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/6/4/644714dd-7a0b-4d4b-9a61-8f6e505b1d22.jpg?1783909489",
+"mana": "{1}{U}{U}",
+"name": "Twist Reality",
+"rarity": "common",
+"type": "Instant",
+"type_line": "Instant",
+"uri": "https://scryfall.com/card/dsk/77/twist-reality"
+},
 "twisted abomination": {
 "art": "front/7/b/7bcaee2c-fad7-4ee2-8fe7-20b2c1eee5c5.jpg?1783915663",
 "artist": "Daren Bader",
@@ -207078,6 +207221,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/cm2/81/unnerve"
+},
+"unnerving grasp": {
+"art": "front/5/6/5602756d-76d2-4502-965f-36fc44596123.jpg?1783909487",
+"artist": "Jeremy Wilson",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/5/6/5602756d-76d2-4502-965f-36fc44596123.jpg?1783909487",
+"mana": "{2}{U}",
+"name": "Unnerving Grasp",
+"rarity": "uncommon",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/dsk/80/unnerving-grasp"
 },
 "unquenchable fury": {
 "art": "front/d/b/db6b3f71-d833-4548-8d66-1d51da08d8b9.jpg?1783923990",
@@ -213656,6 +213812,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/dft/227/voyage-home"
+},
+"voyager glidecar": {
+"art": "front/1/3/13eb445a-dd41-4760-8299-9ba5d6de6aaf.jpg?1795621399",
+"artist": "Eduardo Francisco",
+"cmc": 1.0,
+"colors": "W",
+"img": "front/1/3/13eb445a-dd41-4760-8299-9ba5d6de6aaf.jpg?1795621399",
+"mana": "{W}",
+"name": "Voyager Glidecar",
+"rarity": "rare",
+"type": "Artifact",
+"type_line": "Artifact — Vehicle",
+"uri": "https://scryfall.com/card/dft/36/voyager-glidecar"
 },
 "voyager quickwelder": {
 "art": "front/f/6/f6dcdc8c-fba1-4ea1-bf93-65072d10f0da.jpg?1783907912",
@@ -221144,6 +221313,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/ncc/42/writ-of-return"
+},
+"write into being": {
+"art": "front/a/8/a85e6fbe-cda0-4fbf-853c-c03c567a7de9.jpg?1783938701",
+"artist": "Yeong-Hao Han",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/a/8/a85e6fbe-cda0-4fbf-853c-c03c567a7de9.jpg?1783938701",
+"mana": "{2}{U}",
+"name": "Write into Being",
+"rarity": "common",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/frf/59/write-into-being"
 },
 "writhing chrysalis": {
 "art": "front/f/5/f54dbeb1-51f8-40e2-912a-ec25457de5a2.jpg?1783911244",
