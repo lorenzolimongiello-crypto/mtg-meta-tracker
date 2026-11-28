@@ -3091,6 +3091,19 @@
 "type_line": "Creature — Eye Horror",
 "uri": "https://scryfall.com/card/fin/87/ahriman"
 },
+"aid from the cowl": {
+"art": "front/3/2/327dbb25-833a-4293-b397-ebe7859227a5.jpg?1783917143",
+"artist": "Viktor Titov",
+"cmc": 5.0,
+"colors": "G",
+"img": "front/3/2/327dbb25-833a-4293-b397-ebe7859227a5.jpg?1783917143",
+"mana": "{3}{G}{G}",
+"name": "Aid from the Cowl",
+"rarity": "rare",
+"type": "Enchantment",
+"type_line": "Enchantment",
+"uri": "https://scryfall.com/card/moc/290/aid-from-the-cowl"
+},
 "ainok bond-kin": {
 "art": "front/6/9/6956c523-507c-4256-88b8-58a8a108c79f.jpg?1783915729",
 "artist": "Chris Rahn",
@@ -27401,6 +27414,19 @@
 "type_line": "Legendary Creature — Human Kree Hero",
 "uri": "https://scryfall.com/card/msc/589/captain-marvel-shooting-star"
 },
+"captain n'ghathrod": {
+"art": "front/5/5/55c02dc8-0743-400c-b334-ca029caf0463.jpg?1783922521",
+"artist": "Andrey Kuzinskiy",
+"cmc": 5.0,
+"colors": "BU",
+"img": "front/5/5/55c02dc8-0743-400c-b334-ca029caf0463.jpg?1783922521",
+"mana": "{3}{U}{B}",
+"name": "Captain N'ghathrod",
+"rarity": "mythic",
+"type": "Creature",
+"type_line": "Legendary Creature — Horror Pirate",
+"uri": "https://scryfall.com/card/clb/646/captain-nghathrod"
+},
 "captain of the watch": {
 "art": "front/6/e/6e201980-e220-44dc-beab-ad13c20332bd.jpg?1783938638",
 "artist": "Greg Staples",
@@ -48032,6 +48058,19 @@
 "type_line": "Creature — Spirit",
 "uri": "https://scryfall.com/card/pca/86/dimir-infiltrator"
 },
+"dimir keyrune": {
+"art": "front/6/9/69d1dd6c-21d3-4fe8-af1b-7088dcceef08.jpg?1783922392",
+"artist": "Daniel Ljunggren",
+"cmc": 3.0,
+"colors": "BU",
+"img": "front/6/9/69d1dd6c-21d3-4fe8-af1b-7088dcceef08.jpg?1783922392",
+"mana": "{3}",
+"name": "Dimir Keyrune",
+"rarity": "uncommon",
+"type": "Artifact",
+"type_line": "Artifact",
+"uri": "https://scryfall.com/card/clb/856/dimir-keyrune"
+},
 "dimir machinations": {
 "art": "front/1/4/14bfd72a-78c1-4167-89bf-ea1fccccd5b1.jpg?1783943671",
 "artist": "Greg Staples",
@@ -58418,6 +58457,19 @@
 "type": "Instant",
 "type_line": "Instant",
 "uri": "https://scryfall.com/card/snc/183/endless-detour"
+},
+"endless evil": {
+"art": "front/8/0/804b3378-b330-45d2-9e2c-602ec080f285.jpg?1783922508",
+"artist": "Diego Gisbert",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/8/0/804b3378-b330-45d2-9e2c-602ec080f285.jpg?1783922508",
+"mana": "{2}{U}",
+"name": "Endless Evil",
+"rarity": "rare",
+"type": "Enchantment",
+"type_line": "Enchantment — Aura",
+"uri": "https://scryfall.com/card/clb/665/endless-evil"
 },
 "endless foot assault": {
 "art": "front/3/8/387f6f60-69da-4965-9ab9-57bdb763a013.jpg?1783904172",
@@ -75969,6 +76021,19 @@
 "type_line": "Enchantment — Aura",
 "uri": "https://scryfall.com/card/ecl/177/gilt-leafs-embrace"
 },
+"gimbal, gremlin prodigy": {
+"art": "front/4/a/4a9aa899-752b-4106-89ba-9475ee777d41.jpg?1783917294",
+"artist": "Fajareka Setiawan",
+"cmc": 5.0,
+"colors": "GRU",
+"img": "front/4/a/4a9aa899-752b-4106-89ba-9475ee777d41.jpg?1783917294",
+"mana": "{2}{G}{U}{R}",
+"name": "Gimbal, Gremlin Prodigy",
+"rarity": "mythic",
+"type": "Creature",
+"type_line": "Legendary Creature — Gremlin Artificer",
+"uri": "https://scryfall.com/card/moc/3/gimbal-gremlin-prodigy"
+},
 "gimli of the glittering caves": {
 "art": "front/5/a/5afc0319-9e17-4e81-a0b6-e76645bacb04.jpg?1783916028",
 "artist": "Sidharth Chaturvedi",
@@ -81506,6 +81571,19 @@
 "type": "Creature",
 "type_line": "Creature — Elemental",
 "uri": "https://scryfall.com/card/ecc/110/greenwarden-of-murasa"
+},
+"grell philosopher": {
+"art": "front/e/1/e18bb373-a0bb-4e3c-b7db-83f747820fcd.jpg?1783922509",
+"artist": "David Astruga",
+"cmc": 3.0,
+"colors": "U",
+"img": "front/e/1/e18bb373-a0bb-4e3c-b7db-83f747820fcd.jpg?1783922509",
+"mana": "{2}{U}",
+"name": "Grell Philosopher",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Horror Wizard",
+"uri": "https://scryfall.com/card/clb/666/grell-philosopher"
 },
 "gremlin tamer": {
 "art": "front/3/5/3593a222-21c5-4f91-bde1-763ea08071da.jpg?1783909443",
@@ -91685,6 +91763,19 @@
 "type": "Creature",
 "type_line": "Creature — Tiefling Warrior",
 "uri": "https://scryfall.com/card/clb/27/icewind-stalwart"
+},
+"ichor elixir": {
+"art": "front/5/f/5ff34beb-9a69-4e15-91d3-be2100b73797.jpg?1783917270",
+"artist": "Warren Mahy",
+"cmc": 4.0,
+"colors": "",
+"img": "front/5/f/5ff34beb-9a69-4e15-91d3-be2100b73797.jpg?1783917270",
+"mana": "{4}",
+"name": "Ichor Elixir",
+"rarity": "rare",
+"type": "Artifact",
+"type_line": "Artifact",
+"uri": "https://scryfall.com/card/moc/46/ichor-elixir"
 },
 "ichor rats": {
 "art": "front/2/0/2013aed6-7415-4bf0-a3bb-46d6beecbaff.jpg?1783941730",
@@ -124598,6 +124689,19 @@
 "type_line": "Legendary Creature — Human Wizard Pilot",
 "uri": "https://scryfall.com/card/dft/52/mu-yanling-wind-rider"
 },
+"muad'dib, prophet foretold": {
+"art": "front/3/2/3259dcf4-ed05-4d7e-93ed-d9b17f8e2a8a.jpg?1795003725",
+"artist": "Lixin Yin",
+"cmc": 3.0,
+"colors": "GRU",
+"img": "front/3/2/3259dcf4-ed05-4d7e-93ed-d9b17f8e2a8a.jpg?1795003725",
+"mana": "{G}{U}{R}",
+"name": "Muad'Dib, Prophet Foretold",
+"rarity": "mythic",
+"type": "Creature",
+"type_line": "Legendary Creature — Human Noble Warrior",
+"uri": "https://scryfall.com/card/sld/2918/muaddib-prophet-foretold"
+},
 "muck drubb": {
 "art": "front/c/b/cb2aaec8-43a0-4639-8190-3ce1273a2711.jpg?1783927816",
 "artist": "Jim Nelson",
@@ -126248,6 +126352,19 @@
 "type": "Creature",
 "type_line": "Creature — Elf Warrior",
 "uri": "https://scryfall.com/card/mh3/275/nadiers-nightblade"
+},
+"nadier, agent of the duskenel": {
+"art": "front/4/7/47c5948b-b021-4d07-8003-9c11db690bc0.jpg?1783928833",
+"artist": "Yongjae Choi",
+"cmc": 6.0,
+"colors": "B",
+"img": "front/4/7/47c5948b-b021-4d07-8003-9c11db690bc0.jpg?1783928833",
+"mana": "{5}{B}",
+"name": "Nadier, Agent of the Duskenel",
+"rarity": "uncommon",
+"type": "Creature",
+"type_line": "Legendary Creature — Elf Warrior",
+"uri": "https://scryfall.com/card/cmr/135/nadier-agent-of-the-duskenel"
 },
 "nadir kraken": {
 "art": "front/b/e/be7b276f-2351-4f56-a104-13e3ec3f0890.jpg?1783908764",
@@ -129225,6 +129342,19 @@
 "type": "Artifact",
 "type_line": "Artifact",
 "uri": "https://scryfall.com/card/a25/226/nihil-spellbomb"
+},
+"nihilith": {
+"art": "front/5/9/598900a0-e244-45e3-a04a-685837fb1867.jpg?1783922440",
+"artist": "Dave Allsop",
+"cmc": 6.0,
+"colors": "B",
+"img": "front/5/9/598900a0-e244-45e3-a04a-685837fb1867.jpg?1783922440",
+"mana": "{4}{B}{B}",
+"name": "Nihilith",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Horror",
+"uri": "https://scryfall.com/card/clb/765/nihilith"
 },
 "nihiloor": {
 "art": "front/a/6/a652ac92-4e61-45ec-866e-baafefd355e5.jpg?1783926238",
@@ -137220,6 +137350,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/vow/124/path-of-peril"
+},
+"path of the animist": {
+"art": "front/d/a/daf5fe01-6f27-4a78-bff0-0bfbb1bbd49f.jpg?1783917277",
+"artist": "Liiga Smilshkalne",
+"cmc": 4.0,
+"colors": "G",
+"img": "front/d/a/daf5fe01-6f27-4a78-bff0-0bfbb1bbd49f.jpg?1783917277",
+"mana": "{3}{G}",
+"name": "Path of the Animist",
+"rarity": "rare",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/moc/38/path-of-the-animist"
 },
 "path of the enigma": {
 "art": "front/0/8/0873cc1c-1285-4c39-936b-78fd8f93f3ad.jpg?1783917288",
@@ -149012,6 +149155,19 @@
 "type_line": "Legendary Creature — Human Knight",
 "uri": "https://scryfall.com/card/slx/24/rashel-fist-of-torm"
 },
+"rashmi and ragavan": {
+"art": "front/3/0/30b2f2fd-8087-4fa8-9eb7-bf9b89a5dfb9.jpg?1783917291",
+"artist": "Joshua Cairos",
+"cmc": 4.0,
+"colors": "GRU",
+"img": "front/3/0/30b2f2fd-8087-4fa8-9eb7-bf9b89a5dfb9.jpg?1783917291",
+"mana": "{1}{G}{U}{R}",
+"name": "Rashmi and Ragavan",
+"rarity": "mythic",
+"type": "Creature",
+"type_line": "Legendary Creature — Elf Monkey",
+"uri": "https://scryfall.com/card/moc/8/rashmi-and-ragavan"
+},
 "rashmi, eternities crafter": {
 "art": "front/e/5/e553935f-d8d8-4b98-ab4a-5a2eea3f3626.jpg?1783909591",
 "artist": "Magali Villeneuve",
@@ -157109,6 +157265,19 @@
 "type_line": "Enchantment",
 "uri": "https://scryfall.com/card/10e/292/root-maze"
 },
+"root out": {
+"art": "front/2/2/228a08f0-6664-407a-a74c-2c32badc0d37.jpg?1783917135",
+"artist": "Daniel Ljunggren",
+"cmc": 3.0,
+"colors": "G",
+"img": "front/2/2/228a08f0-6664-407a-a74c-2c32badc0d37.jpg?1783917135",
+"mana": "{2}{G}",
+"name": "Root Out",
+"rarity": "common",
+"type": "Sorcery",
+"type_line": "Sorcery",
+"uri": "https://scryfall.com/card/moc/311/root-out"
+},
 "root sliver": {
 "art": "front/f/d/fdf5a106-5fb7-40e4-82a7-db559302a923.jpg?1783944898",
 "artist": "Matt Thompson",
@@ -160346,6 +160515,19 @@
 "type_line": "Land",
 "uri": "https://scryfall.com/card/ecc/164/sandsteppe-citadel"
 },
+"sandsteppe war riders": {
+"art": "front/e/e/eed8f00b-0d77-48d4-a7b8-979a8ebc2210.jpg?1783917276",
+"artist": "Kekai Kotaki",
+"cmc": 4.0,
+"colors": "G",
+"img": "front/e/e/eed8f00b-0d77-48d4-a7b8-979a8ebc2210.jpg?1783917276",
+"mana": "{3}{G}",
+"name": "Sandsteppe War Riders",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Human Warrior",
+"uri": "https://scryfall.com/card/moc/39/sandsteppe-war-riders"
+},
 "sandstone bridge": {
 "art": "front/c/7/c781e932-4605-47aa-add1-4ee62f4e7ead.jpg?1783938173",
 "artist": "Cliff Childs",
@@ -162321,6 +162503,19 @@
 "type": "Artifact",
 "type_line": "Legendary Artifact",
 "uri": "https://scryfall.com/card/40k/166/sceptre-of-eternal-glory"
+},
+"schema thief": {
+"art": "front/9/6/963fa041-5388-4fe5-97f6-2cd0e61808ce.jpg?1783917286",
+"artist": "Artur Treffner",
+"cmc": 4.0,
+"colors": "U",
+"img": "front/9/6/963fa041-5388-4fe5-97f6-2cd0e61808ce.jpg?1783917286",
+"mana": "{3}{U}",
+"name": "Schema Thief",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Vedalken Rogue Artificer",
+"uri": "https://scryfall.com/card/moc/24/schema-thief"
 },
 "scheming fence": {
 "art": "front/a/f/af7ef030-7bae-4820-b51a-8fad57a8ff2f.jpg?1783923071",
@@ -174672,6 +174867,19 @@
 "type_line": "Creature — Soltari Soldier",
 "uri": "https://scryfall.com/card/tmp/43/soltari-foot-soldier"
 },
+"soltari monk": {
+"art": "front/7/b/7b65aaa5-0b1b-4298-a3c7-1808b240491f.jpg?1783938503",
+"artist": "Janet Aulisio",
+"cmc": 2.0,
+"colors": "W",
+"img": "front/7/b/7b65aaa5-0b1b-4298-a3c7-1808b240491f.jpg?1783938503",
+"mana": "{W}{W}",
+"name": "Soltari Monk",
+"rarity": "uncommon",
+"type": "Creature",
+"type_line": "Creature — Soltari Monk Cleric",
+"uri": "https://scryfall.com/card/tpr/31/soltari-monk"
+},
 "soltari priest": {
 "art": "front/4/5/45a3854c-147e-4644-8438-d973648c974d.jpg?1783938503",
 "artist": "Janet Aulisio",
@@ -183236,6 +183444,19 @@
 "type": "Sorcery",
 "type_line": "Sorcery",
 "uri": "https://scryfall.com/card/soi/185/structural-distortion"
+},
+"struggle": {
+"art": "front/b/f/bf909dbb-6e49-4556-a37a-2738889915d1.jpg?1783917124",
+"artist": "Eric Deschamps",
+"cmc": 5.0,
+"colors": "GR",
+"img": "front/b/f/bf909dbb-6e49-4556-a37a-2738889915d1.jpg?1783917124",
+"mana": "{2}{R}",
+"name": "Struggle // Survive",
+"rarity": "uncommon",
+"type": "Instant",
+"type_line": "Instant // Sorcery",
+"uri": "https://scryfall.com/card/moc/339/struggle-survive"
 },
 "struggle for project purity": {
 "art": "front/0/4/04c60155-9337-4ea2-b9a2-5b72d96743ff.jpg?1794586181",
@@ -205051,6 +205272,19 @@
 "type_line": "Artifact",
 "uri": "https://scryfall.com/card/chk/272/uba-mask"
 },
+"uchuulon": {
+"art": "front/e/c/ecef5fca-72ec-4aee-af6e-ee5d6f6bc567.jpg?1783922501",
+"artist": "Sam Burley",
+"cmc": 4.0,
+"colors": "B",
+"img": "front/e/c/ecef5fca-72ec-4aee-af6e-ee5d6f6bc567.jpg?1783922501",
+"mana": "{3}{B}",
+"name": "Uchuulon",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Crab Ooze Horror",
+"uri": "https://scryfall.com/card/clb/673/uchuulon"
+},
 "ugin's binding": {
 "art": "front/b/e/be13786a-f967-456b-bbc6-f4312467a827.jpg?1783911286",
 "artist": "Drew Baker",
@@ -217011,6 +217245,19 @@
 "type_line": "Land // Legendary Creature — Demon",
 "uri": "https://scryfall.com/card/inr/287/westvale-abbey-ormendahl-profane-prince"
 },
+"wharf infiltrator": {
+"art": "front/b/4/b434ba9e-528c-43b4-a463-0e697dce8d5d.jpg?1783922463",
+"artist": "Daarken",
+"cmc": 2.0,
+"colors": "U",
+"img": "front/b/4/b434ba9e-528c-43b4-a463-0e697dce8d5d.jpg?1783922463",
+"mana": "{1}{U}",
+"name": "Wharf Infiltrator",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Human Horror",
+"uri": "https://scryfall.com/card/clb/737/wharf-infiltrator"
+},
 "what must be done": {
 "art": "front/f/e/fe034544-e13f-45fc-ae43-83d0f399ed33.jpg?1783910986",
 "artist": "Syd Mills",
@@ -220611,6 +220858,19 @@
 "type": "Creature",
 "type_line": "Artifact Creature — Construct",
 "uri": "https://scryfall.com/card/cmr/348/workshop-assistant"
+},
+"workshop elders": {
+"art": "front/0/0/0058a848-cb55-408a-a500-d97f573588f5.jpg?1783917161",
+"artist": "Iain McCaig",
+"cmc": 7.0,
+"colors": "U",
+"img": "front/0/0/0058a848-cb55-408a-a500-d97f573588f5.jpg?1783917161",
+"mana": "{6}{U}",
+"name": "Workshop Elders",
+"rarity": "rare",
+"type": "Creature",
+"type_line": "Creature — Human Artificer",
+"uri": "https://scryfall.com/card/moc/245/workshop-elders"
 },
 "world at war": {
 "art": "front/a/1/a16cc7c1-733c-479a-83d7-67152191ca8b.jpg?1793197516",
